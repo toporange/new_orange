@@ -7,159 +7,358 @@
   <meta name="description" content="顎関節症・頭蓋骨調整の専門整体。平塚で不安に寄り添い、やさしく整える整体院です。" />
 
   <style>
-
-    .hero-visual{
-  max-width: 460px;      /* 右側の絵の横幅を安定させる */
-  margin-left: auto;     /* 右寄せ */
-}
-
-.illustration{
-  display:block;
-  width:100%;
-  height:auto;
-  aspect-ratio: 4 / 3;   /* viewBox(400x300)に合わせる */
-}
-
-    
     :root{
       --blue:#2f6fce;
-      --blue-soft:#eaf2ff;
+      --blue-50:#f2f7fc;
+      --blue-100:#e6f0fa;
+      --blue-200:#cfe2f5;
+      --blue-400:#5a8fdc;
+      --blue-600:#255cb0;
+
       --orange:#ff9d3b;
+      --orange-50:#fff6ea;
+
       --text:#1f2937;
+      --muted:#6b7280;
       --radius:18px;
+      --shadow: 0 12px 28px rgba(18,66,145,.08);
+      --border: 1px solid #e9eef7;
     }
+
+    html,body{margin:0;padding:0;background:#fff;color:var(--text);}
     body{
-      margin:0;
-      font-family:"Hiragino Maru Gothic ProN","Yu Gothic Rounded","Yu Gothic","Meiryo",sans-serif;
-      color:var(--text);
+      font-family:"Hiragino Maru Gothic ProN","Yu Gothic Rounded","Yu Gothic","Meiryo",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       line-height:1.7;
     }
-    a{color:var(--blue);text-decoration:none;}
-    .container{max-width:1100px;margin:0 auto;padding:0 5%;}
+    a{color:var(--blue-600);text-decoration:none}
+    img{max-width:100%;height:auto}
+    .container{width:min(1100px,92%);margin:0 auto}
+
+    /* Header */
     header{
-      position:sticky;top:0;
-      background:rgba(255,255,255,.9);
-      backdrop-filter:blur(8px);
-      border-bottom:1px solid #eee;
-      z-index:10;
+      position:sticky;top:0;z-index:50;
+      background:rgba(255,255,255,.86);
+      backdrop-filter:saturate(160%) blur(10px);
+      border-bottom:1px solid #eef2f7;
     }
     .header-inner{
-      display:flex;justify-content:space-between;align-items:center;
-      padding:1rem 0;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:.85rem 0;
+      gap:1rem;
     }
     .brand{
-      font-size:1.4rem;font-weight:900;
+      display:flex;align-items:center;gap:.85rem;
+      min-width: 220px;
     }
-    nav a{margin-left:1rem;font-weight:600;}
+    .brand__logo{
+      width:40px;height:40px;border-radius:999px;
+      background:linear-gradient(135deg,var(--blue-400),var(--blue-600));
+      display:grid;place-items:center;
+      color:#fff;font-weight:900;
+      flex:0 0 auto;
+    }
+    .brand__name{
+      font-weight:900;
+      letter-spacing:.02em;
+      font-size:1.35rem; /* ←院名を大きめに */
+      line-height:1.1;
+    }
+    .brand__sub{
+      font-size:.82rem;color:var(--muted);
+      margin-top:.12rem;
+    }
+    nav ul{display:flex;gap:.4rem;list-style:none;margin:0;padding:0;align-items:center;flex-wrap:wrap}
+    nav a{
+      display:inline-block;
+      padding:.55rem .7rem;border-radius:12px;
+      color:var(--blue-600);font-weight:700;
+    }
+    nav a:hover{background:var(--blue-50)}
+    .nav-cta{
+      background:var(--orange);
+      color:#fff !important;
+      box-shadow:0 10px 22px rgba(255,157,59,.18);
+    }
+    .nav-cta:hover{filter:brightness(.98)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      gap:.5rem;
+      border-radius:999px;
+      padding:.78rem 1.08rem;
+      font-weight:900;
+      border:1px solid transparent;
+      transition:.15s;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn--outline{
+      background:#fff;color:var(--blue-600);
+      border-color:var(--blue-400);
+    }
+    .btn--outline:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+    .btn--orange{
+      background:var(--orange);color:#fff;
+    }
+    .btn--orange:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(255,157,59,.18)}
+    .badge{
+      display:inline-block;
+      padding:.2rem .65rem;
+      border-radius:999px;
+      background:var(--blue-100);
+      color:var(--blue-600);
+      font-weight:900;
+      font-size:.82rem;
+    }
 
     /* HERO */
     .hero{
-      background:linear-gradient(180deg,var(--blue-soft),#fff);
-      padding:3rem 0;
+      position:relative;
       overflow:hidden;
+      background:linear-gradient(180deg,var(--blue-50),#fff);
+      padding:2.8rem 0 2.2rem;
     }
     .hero-grid{
       display:grid;
-      grid-template-columns:1.1fr 0.9fr;
+      grid-template-columns: 1.1fr .9fr;
       gap:2rem;
       align-items:center;
     }
     .hero h1{
-      font-size:2.1rem;
-      line-height:1.4;
-      margin:0 0 1rem;
+      font-size: clamp(1.6rem, 3.4vw, 2.45rem);
+      line-height:1.28;
+      margin:.7rem 0;
+      letter-spacing:.01em;
     }
-    .hero p{
-      max-width:520px;
+    .hero .lead{
+      color:var(--muted);
+      font-size: clamp(1rem, 1.4vw, 1.15rem);
+      margin:.2rem 0 0;
+      max-width: 44ch;
     }
-    .cta{
-      margin-top:1.2rem;
-      display:flex;gap:.8rem;flex-wrap:wrap;
+    .hero .cta{
+      display:flex;gap:.75rem;flex-wrap:wrap;
+      margin-top:1.25rem;
     }
-    .btn{
-      padding:.7rem 1.1rem;
-      border-radius:999px;
-      font-weight:700;
-      display:inline-block;
-    }
-    .btn.tel{border:2px solid var(--blue);color:var(--blue);}
-    .btn.line{background:var(--orange);color:#fff;}
 
-    /* アイキャッチ */
+    /* 右側の見え方を「崩れない」ように固定 */
     .hero-visual{
       position:relative;
+      width:100%;
+      max-width: 520px;
+      margin-left:auto;
+      min-height: 320px; /* ←ここがPCの「消える/潰れる」対策の要 */
     }
+
+    /* 背景の丸（弱めるB） */
     .bubble{
       position:absolute;
-      border-radius:50%;
-      background:rgba(47,111,206,.12);
+      border-radius:999px;
+      pointer-events:none;
       z-index:0;
+      opacity:.55; /* ←弱め */
     }
-    .bubble.b1{width:280px;height:280px;top:-40px;left:40px;}
-    .bubble.b2{width:220px;height:220px;bottom:-30px;right:10px;background:rgba(255,157,59,.18);}
+    .bubble.b1{
+      width:300px;height:300px;
+      top:-30px;left:10px;
+      background:rgba(90,143,220,.18);
+    }
+    .bubble.b2{
+      width:240px;height:240px;
+      bottom:-40px;right:-10px;
+      background:rgba(255,157,59,.16);
+    }
 
+    /* SVGが絶対に潰れない設定 */
     .illustration{
       position:relative;
       z-index:1;
+      display:block;
+      width:100%;
+      height:auto;
+      max-height: 360px;
+      filter: drop-shadow(0 18px 28px rgba(18,66,145,.07));
     }
 
-    @media(max-width:900px){
-      .hero-grid{grid-template-columns:1fr;}
-      .hero h1{font-size:1.7rem;}
+    /* 右側カード */
+    .panel{
+      margin-top:1rem;
+      background:#fff;
+      border:var(--border);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      padding:1.15rem 1.15rem 1.0rem;
+    }
+    .panel h3{margin:.15rem 0 .5rem;font-size:1.05rem}
+    .panel ul{margin:.2rem 0 0;padding-left:1.1rem;color:var(--muted)}
+    .panel li{margin:.25rem 0}
+
+    /* sections (最低限) */
+    section{padding:2.2rem 0}
+    .section-head{margin-bottom:1.1rem}
+    .section-head h2{margin:.2rem 0;font-size: clamp(1.2rem, 2.6vw, 1.8rem)}
+    .muted{color:var(--muted)}
+
+    .cta-bar{
+      position:sticky;bottom:0;z-index:40;
+      background:#fff;border-top:var(--border);
+    }
+    .cta-bar .inner{
+      display:flex;gap:.6rem;justify-content:center;align-items:center;
+      padding:.65rem 0;
+      flex-wrap:wrap;
+    }
+
+    footer{
+      background:#0f2142;color:#d9e5ff;
+      padding:1.6rem 0;
+    }
+    footer a{color:#e1ecff}
+
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr;gap:1.2rem}
+      .hero-visual{max-width: 640px; min-height: 240px}
+      nav ul{gap:.2rem}
     }
   </style>
 </head>
 
 <body>
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand__logo">OS</div>
+        <div>
+          <div class="brand__name">オレンジ整体院</div>
+          <div class="brand__sub">顎関節症・頭蓋骨調整の専門整体（平塚）</div>
+        </div>
+      </div>
 
-<header>
-  <div class="container header-inner">
-    <div class="brand">オレンジ整体院</div>
-    <nav>
-      <a href="#">症状別</a>
-      <a href="#">院長紹介</a>
-      <a href="#">アクセス</a>
-    </nav>
-  </div>
-</header>
+      <nav aria-label="主要ナビゲーション">
+        <ul>
+          <li><a href="#about">院長紹介</a></li>
+          <li><a href="#access">アクセス</a></li>
+          <li><a class="nav-cta" href="#line">LINEで相談</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <h1>
-        不安に寄り添い、やさしく整える。<br>
-        顎と頭から、全身のバランスを。
-      </h1>
-      <p>
-        顎関節症・噛みしめ・頭痛など。<br>
-        強く押さず、丁寧なタッチで整えます。<br>
-        初めての方も安心してご相談ください。
-      </p>
-      <div class="cta">
-        <a class="btn tel" href="tel:0463-24-6062">電話 0463-24-6062</a>
-        <a class="btn line" href="#">LINEで相談</a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">顎関節症・頭蓋骨調整の専門</span>
+        <h1>
+          不安に寄り添い、やさしく整える。<br>
+          顎と頭から、全身のバランスを。
+        </h1>
+        <p class="lead">
+          顎の痛み・口の開けづらさ・頭痛・肩首こりなど。<br>
+          強く押さず、軽いタッチで丁寧に整えます。初めての方も安心してご相談ください。
+        </p>
+
+        <div class="cta">
+          <a class="btn btn--outline" href="tel:0463-24-6062">電話 0463-24-6062</a>
+          <a class="btn btn--orange" href="#line">LINEで相談</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="hero-visual" aria-label="施術イメージ（圧を感じさせないタッチ）">
+          <div class="bubble b1" aria-hidden="true"></div>
+          <div class="bubble b2" aria-hidden="true"></div>
+
+          <!-- SVG：縦横比固定 + 角丸でやさしい印象 -->
+          <svg class="illustration"
+               viewBox="0 0 400 300"
+               preserveAspectRatio="xMidYMid meet"
+               style="stroke-linecap:round; stroke-linejoin:round;"
+               aria-label="やさしく頬に触れる施術イメージ">
+
+            <!-- 顔（正面） -->
+            <path d="M200 70
+                     C150 70 120 110 120 155
+                     C120 215 160 245 200 245
+                     C240 245 280 215 280 155
+                     C280 110 250 70 200 70 Z"
+                  fill="none" stroke="#111" stroke-width="2.2"/>
+
+            <!-- 目・鼻（控えめ） -->
+            <path d="M172 150 C180 145 188 145 196 150"
+                  fill="none" stroke="#111" stroke-width="2.0" opacity=".55"/>
+            <path d="M204 150 C212 145 220 145 228 150"
+                  fill="none" stroke="#111" stroke-width="2.0" opacity=".55"/>
+            <path d="M200 158 C196 168 196 176 200 184"
+                  fill="none" stroke="#111" stroke-width="2.0" opacity=".45"/>
+
+            <!-- 手（頬に「触れる」：圧の表現を出さない） -->
+            <path d="M270 150
+                     C292 145 315 148 334 160"
+                  fill="none" stroke="#111" stroke-width="2.2"/>
+
+            <!-- 指：圧が出ないように距離感を作る -->
+            <path d="M262 132 C282 120 305 116 332 118"
+                  fill="none" stroke="#111" stroke-width="2.2"/>
+            <path d="M262 146 C284 138 308 138 336 144"
+                  fill="none" stroke="#111" stroke-width="2.2"/>
+            <path d="M264 162 C286 160 310 164 334 176"
+                  fill="none" stroke="#111" stroke-width="2.2"/>
+
+            <!-- 小さなオレンジアクセント（最小限） -->
+            <circle cx="260" cy="150" r="5.5" fill="rgba(255,157,59,.55)"/>
+          </svg>
+        </div>
+
+        <aside class="panel" aria-label="初めての方へ">
+          <h3>初めての方へ</h3>
+          <ul>
+            <li>カウンセリング重視で安心（約20分）</li>
+            <li>痛みの少ないやさしい調整</li>
+            <li>セルフケアをわかりやすくご案内</li>
+            <li>完全予約制・清潔な院内</li>
+          </ul>
+        </aside>
       </div>
     </div>
+  </section>
 
-    <!-- HERO アイキャッチ -->
-    <div class="hero-visual">
-      <div class="bubble b1"></div>
-      <div class="bubble b2"></div>
+  <!-- 最低限の下部（仮） -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="badge">院長紹介</span>
+        <h2>「不安をほどく」対話と施術</h2>
+      </div>
+      <p class="muted">
+        痛みや不調の背景には、不安や緊張が影響していることがあります。
+        丁寧にお話を伺い、状態と目標を共有しながら、軽いタッチで体の回復力を引き出します。
+      </p>
+    </div>
+  </section>
 
-      <!-- SVG：圧を感じさせないタッチ -->
-      <svg class="illustration" viewBox="0 0 400 300" width="100%" aria-label="やさしく頬に触れる施術イメージ">
-        <circle cx="160" cy="150" r="90" fill="none" stroke="#000" stroke-width="2"/>
-        <path d="M210 150 C230 145 250 150 265 160"
-              fill="none" stroke="#000" stroke-width="2"/>
-        <!-- 指（圧なし） -->
-        <path d="M240 135 C255 125 270 120 285 118"
-              fill="none" stroke="#000" stroke-width="2"/>
-        <path d="M240 150 C255 145 270 145 288 148"
-              fill="none" stroke="#000" stroke-width="2"/>
-      </svg>
+  <section id="access">
+    <div class="container">
+      <div class="section-head">
+        <span class="badge">アクセス</span>
+        <h2>平塚駅から○分・駐車場あり</h2>
+      </div>
+      <p class="muted">※この部分は後ほどGoogleマップ埋め込みに置き換えます。</p>
+    </div>
+  </section>
+
+  <div class="cta-bar" id="line">
+    <div class="container inner">
+      <a class="btn btn--outline" href="tel:0463-24-6062">電話予約</a>
+      <a class="btn btn--orange" href="#">LINE相談</a>
     </div>
   </div>
-</section>
 
+  <footer>
+    <div class="container">
+      <div style="font-weight:900;font-size:1.1rem;margin-bottom:.4rem">オレンジ整体院</div>
+      <div style="color:#bcd2ff">顎関節症・頭蓋骨調整の専門整体。やさしい施術と丁寧な説明で、不安に寄り添います。</div>
+      <div style="margin-top:.7rem;color:#96b3f6;font-size:.92rem">© Orange Seitai</div>
+    </div>
+  </footer>
 </body>
 </html>
