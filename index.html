@@ -87,7 +87,9 @@ display:block;
   .hero h1{font-size:1.7rem}
   .hero-visual{height:300px}
 }
-
+@media(max-width:900px){
+#first > .container > div{ grid-template-columns:1fr !important; }
+}
 </style> </head> <body> 
  
   <header> <div class="container header-inner"> <div class="brand">オレンジ整体院</div> <nav> <a href="about">院長紹介</a> <a href="access">アクセス</a> </nav> </div> </header> <section class="hero"> <div class="container hero-grid"> <div> <h1> 不安に寄り添い、やさしく整える。<br> 顎と頭から、全身のバランスを。 </h1> <p> 顎関節症・噛みしめ・頭痛など。<br> 強く押さず、軽いタッチで整えます。 </p> <div class="cta"> <a class="btn tel" href="tel:0463-24-6062">電話 0463-24-6062</a> <a class="btn line" href="#">LINEで相談</a> </div> </div>
@@ -99,4 +101,60 @@ display:block;
 </div>
 
 </div> </section> 
+  <section id="first" style="background:linear-gradient(180deg,#fff,var(--blue-50));"> <div class="container" style="padding:2.2rem 0;"> <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:1.4rem;align-items:start;"> <div> <span class="badge">初めての方へ</span> <h2 style="margin:.6rem 0 .6rem;">まずは「不安を減らす」ところから</h2> <p style="color:var(--muted);margin:0 0 1rem;"> 顎まわりの不調は、緊張や不安が症状を強めることがあります。 当院では<strong>強く押さない</strong>やさしいタッチで、状態を丁寧に確認しながら進めます。 </p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;">
+      <div style="background:#fff;border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);">
+        <div style="font-weight:900;color:var(--blue-600);">STEP 1</div>
+        <div style="font-weight:900;margin:.2rem 0;">カウンセリング</div>
+        <div style="color:var(--muted);font-size:.95rem;">不安や経過を丁寧に伺い、目標を共有します。</div>
+      </div>
+      <div style="background:#fff;border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);">
+        <div style="font-weight:900;color:var(--blue-600);">STEP 2</div>
+        <div style="font-weight:900;margin:.2rem 0;">状態チェック</div>
+        <div style="color:var(--muted);font-size:.95rem;">顎・首肩・姿勢の関連を見ながら原因を整理します。</div>
+      </div>
+      <div style="background:#fff;border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);">
+        <div style="font-weight:900;color:var(--blue-600);">STEP 3</div>
+        <div style="font-weight:900;margin:.2rem 0;">やさしい施術</div>
+        <div style="color:var(--muted);font-size:.95rem;">強い刺激は避け、必要最小限のタッチで整えます。</div>
+      </div>
+    </div>
+  </div>
+
+  <aside style="background:#fff;border:var(--border);border-radius:18px;padding:1.1rem;box-shadow:var(--shadow);">
+    <div style="font-weight:900;margin:.1rem 0 .6rem;">よくある不安（FAQ）</div>
+
+    <details style="border-top:1px solid #eef2f7;padding:.7rem 0;">
+      <summary style="cursor:pointer;font-weight:800;">痛い施術はありますか？</summary>
+      <div style="color:var(--muted);margin-top:.5rem;font-size:.95rem;">
+        基本的に<strong>強く押したり、無理に動かすことはしません</strong>。刺激に不安がある方は最初にお伝えください。
+      </div>
+    </details>
+
+    <details style="border-top:1px solid #eef2f7;padding:.7rem 0;">
+      <summary style="cursor:pointer;font-weight:800;">どれくらいの頻度で通えばいいですか？</summary>
+      <div style="color:var(--muted);margin-top:.5rem;font-size:.95rem;">
+        状態によりますが、最初は間隔を詰め、その後は安定に合わせて調整します。通院計画は毎回共有します。
+      </div>
+    </details>
+
+    <details style="border-top:1px solid #eef2f7;padding:.7rem 0;">
+      <summary style="cursor:pointer;font-weight:800;">顎以外（首肩・頭痛）も見てもらえますか？</summary>
+      <div style="color:var(--muted);margin-top:.5rem;font-size:.95rem;">
+        はい。顎と首肩・姿勢の関係も確認し、全身のバランスから整えます。
+      </div>
+    </details>
+
+    <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem;">
+      <a class="btn tel" href="tel:0463-24-6062">電話で相談</a>
+      <a class="btn line" href="#line">LINEで相談</a>
+    </div>
+
+    <div style="margin-top:.7rem;color:var(--muted);font-size:.88rem;">
+      ※ネット予約は現状なし。まずはお電話かLINEでご相談ください。
+    </div>
+  </aside>
+</div>
+
+</div> </section>
 <section id="about"> <div class="container" style="padding:2.2rem 0;"> <h2 style="margin:0 0 .6rem;">院長紹介</h2> <p style="color:var(--muted);margin:0;">不安をほどく対話と、やさしい施術で回復力を引き出します。初めての方にも分かりやすくご説明します。</p> </div> </section> <section id="blog"> <div class="container" style="padding:2.2rem 0;"> <h2 style="margin:0 0 .6rem;">身体の知識・連絡事項</h2> <p style="color:var(--muted);margin:0;">セルフケアや身体の情報、休診などのお知らせを発信します。</p> </div> </section> <section id="access"> <div class="container" style="padding:2.2rem 0;"> <h2 style="margin:0 0 .6rem;">アクセス</h2> <p style="color:var(--muted);margin:0;">平塚駅から○分・駐車場あり（※後で地図を入れます）</p> </div> </section> <footer style="background:#0f2142;color:#d9e5ff;padding:1.6rem 0;"> <div class="container"> <div style="font-weight:900;font-size:1.1rem;margin-bottom:.4rem;">オレンジ整体院</div> <div style="color:#bcd2ff;">顎関節症・頭蓋骨調整の専門整体。やさしい施術と丁寧な説明で、不安に寄り添います。</div> <div style="margin-top:.7rem;color:#96b3f6;font-size:.92rem;">© Orange Seitai</div> </div> </footer></body> </html>
