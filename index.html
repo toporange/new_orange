@@ -90,6 +90,9 @@ display:block;
 @media(max-width:900px){
 #first > .container > div{ grid-template-columns:1fr !important; }
 }
+  @media(max-width:900px){
+#symptoms .container > div:last-of-type{ grid-template-columns:1fr !important; }
+}
 </style> </head> <body> 
  
   <header> <div class="container header-inner"> <div class="brand">オレンジ整体院</div> <nav> <a href="about">院長紹介</a> <a href="access">アクセス</a> </nav> </div> </header> <section class="hero"> <div class="container hero-grid"> <div> <h1> 不安に寄り添い、やさしく整える。<br> 顎と頭から、全身のバランスを。 </h1> <p> 顎関節症・噛みしめ・頭痛など。<br> 強く押さず、軽いタッチで整えます。 </p> <div class="cta"> <a class="btn tel" href="tel:0463-24-6062">電話 0463-24-6062</a> <a class="btn line" href="#">LINEで相談</a> </div> </div>
@@ -157,4 +160,28 @@ display:block;
 </div>
 
 </div> </section>
+  <section id="symptoms" style="background:#fff;"> <div class="container" style="padding:2.2rem 0;"> <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;"> <div> <span class="badge">症状別</span> <h2 style="margin:.6rem 0 .3rem;">お悩みから選ぶ</h2> <p style="color:var(--muted);margin:0;">当てはまる症状から、説明とケアの方針をご案内します。</p> </div> </div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:1.1rem;">
+  <a href="#tmj" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
+    <div style="font-weight:900;margin:.1rem 0;">顎関節症</div>
+    <div style="color:var(--muted);font-size:.92rem;">口が開きにくい／音が鳴る／痛み</div>
+  </a>
+
+  <a href="#clench" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
+    <div style="font-weight:900;margin:.1rem 0;">かみしめ・食いしばり</div>
+    <div style="color:var(--muted);font-size:.92rem;">歯ぎしり／エラの疲れ／朝のだるさ</div>
+  </a>
+
+  <a href="#headache" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
+    <div style="font-weight:900;margin:.1rem 0;">頭痛</div>
+    <div style="color:var(--muted);font-size:.92rem;">こめかみ／後頭部の重さ／目の疲れ</div>
+  </a>
+
+  <a href="#neck" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
+    <div style="font-weight:900;margin:.1rem 0;">肩・首こり</div>
+    <div style="color:var(--muted);font-size:.92rem;">姿勢／デスクワーク／緊張</div>
+  </a>
+</div>
+
+</div> </section> <!-- ↓ 後で固定ページにする前提の「仮アンカー」 --> <div id="tmj"></div> <div id="clench"></div> <div id="headache"></div> <div id="neck"></div>
 <section id="about"> <div class="container" style="padding:2.2rem 0;"> <h2 style="margin:0 0 .6rem;">院長紹介</h2> <p style="color:var(--muted);margin:0;">不安をほどく対話と、やさしい施術で回復力を引き出します。初めての方にも分かりやすくご説明します。</p> </div> </section> <section id="blog"> <div class="container" style="padding:2.2rem 0;"> <h2 style="margin:0 0 .6rem;">身体の知識・連絡事項</h2> <p style="color:var(--muted);margin:0;">セルフケアや身体の情報、休診などのお知らせを発信します。</p> </div> </section> <section id="access"> <div class="container" style="padding:2.2rem 0;"> <h2 style="margin:0 0 .6rem;">アクセス</h2> <p style="color:var(--muted);margin:0;">平塚駅から○分・駐車場あり（※後で地図を入れます）</p> </div> </section> <footer style="background:#0f2142;color:#d9e5ff;padding:1.6rem 0;"> <div class="container"> <div style="font-weight:900;font-size:1.1rem;margin-bottom:.4rem;">オレンジ整体院</div> <div style="color:#bcd2ff;">顎関節症・頭蓋骨調整の専門整体。やさしい施術と丁寧な説明で、不安に寄り添います。</div> <div style="margin-top:.7rem;color:#96b3f6;font-size:.92rem;">© Orange Seitai</div> </div> </footer></body> </html>
