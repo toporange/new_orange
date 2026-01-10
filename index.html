@@ -108,6 +108,10 @@ display:block;
 #blog article > div:first-child{ aspect-ratio:16/9 !important; }
 }
       .container{width:min(980px,92%);margin:0 auto}
+      
+      @media (min-width: 901px){
+  #blog .container article{ }
+  #blog .container > div:nth-of-type(2) > div:first-child > div{ grid-template-columns:repeat(2,1fr) !important; }
 </style> </head> 
   
   <body> 
