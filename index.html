@@ -107,13 +107,14 @@ display:block;
 #blog .container > div:nth-of-type(2){ grid-template-columns:1fr !important; }
 #blog article > div:first-child{ aspect-ratio:16/9 !important; }
 }
-
-      
-      @media (min-width: 901px){
+  @media (min-width: 901px){
   #blog .container article{ }
   #blog .container > div:nth-of-type(2) > div:first-child > div{ grid-template-columns:repeat(2,1fr) !important; }
       }
-      
+  .blog-wrap{
+width: min(980px, 92vw);
+margin: 0 auto;
+}
 </style> </head> 
   
   <body> 
