@@ -121,16 +121,15 @@ margin: 0 auto;
   gap:.8rem;
 }
 /* ブログ：PCは2カラム固定（強制） */
-#blog .blog-2col{
+.blog-2col{
   display: grid !important;
   grid-template-columns: 1.6fr 1fr !important;
   gap: 1rem !important;
   align-items: start !important;
 }
-
 /* スマホだけ縦並び */
 @media (max-width: 900px){
-  #blog .blog-2col{
+  .blog-2col{
     grid-template-columns: 1fr !important;
   }
 }
