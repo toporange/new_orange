@@ -135,6 +135,20 @@ margin: 0 auto;
   grid-template-columns:repeat(3, minmax(0, 1fr));
   gap:.8rem;
 }
+/* ブログ：PCは2カラム固定（強制） */
+#blog .blog-2col{
+  display: grid !important;
+  grid-template-columns: 1.6fr 1fr !important;
+  gap: 1rem !important;
+  align-items: start !important;
+}
+
+/* スマホだけ縦並び */
+@media (max-width: 900px){
+  #blog .blog-2col{
+    grid-template-columns: 1fr !important;
+  }
+}
 
 /* タブレット：2列 */
 @media (max-width: 1100px){
@@ -280,12 +294,10 @@ margin: 0 auto;
     
 <div class="blog-wrap">
 <div class="blog-2col">
-
   <!-- 身体の知識：最新3件（仮） -->
   <div style="background:#fff;border:var(--border);border-radius:18px;box-shadow:var(--shadow);padding:1rem;">
     <div style="font-weight:900;margin:.1rem 0 .8rem;">身体の知識（最新）</div>
       <div class="blog-cards">
-
 
       <article style="border:var(--border);border-radius:16px;overflow:hidden;background:#fff;">
         <div style="aspect-ratio:3/2;background:rgba(90,143,220,.12);"></div>
@@ -313,6 +325,7 @@ margin: 0 auto;
           <div style="color:var(--muted);font-size:.92rem;">顎・首肩との関連をわかりやすく。</div>
         </div>
       </article>
+        
         </div>
     </div>
   </div>
@@ -338,6 +351,7 @@ margin: 0 auto;
       <a class="btn tel" href="tel:0463-24-6062">電話</a>
     </div>
   </aside>
+  
     </div>
 </div>
 
