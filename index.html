@@ -130,10 +130,26 @@ margin: 0 auto;
   align-items:start;
 }
 
-/* スマホ・狭い幅では1カラムに切り替え */
-@media (max-width: 900px){
-  .blog-2col{ grid-template-columns: 1fr; }
+.blog-cards{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:.8rem;
 }
+
+/* タブレット：2列 */
+@media (max-width: 1100px){
+  .blog-cards{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* スマホ：1列 */
+@media (max-width: 900px){
+  .blog-cards{
+    grid-template-columns:1fr;
+  }
+}
+
 
 </style> </head> 
   
@@ -343,13 +359,6 @@ margin: 0 auto;
     <h2 style="margin:0 0 .6rem;">院長紹介</h2> 
     <p style="color:var(--muted);margin:0;">不安をほどく対話と、やさしい施術で回復力を引き出します。初めての方にも分かりやすくご説明します。</p> 
   </div> 
-</section> 
-<section id="blog"> 
-    <div class="container" style="padding:2.2rem 0; max-width:980px;"> 
-      <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:1rem;margin-top:1.1rem;align-items:start; max-width:980px; margin:1.1rem auto 0;">
-      <h2 style="margin:0 0 .6rem;">身体の知識・連絡事項</h2> 
-      <p style="color:var(--muted);margin:0;">セルフケアや身体の情報、休診などのお知らせを発信します。</p> 
-    </div>  </div>
 </section> 
     <section id="access"> 
       <div class="container" style="padding:2.2rem 0;"> 
