@@ -1,375 +1,410 @@
-<!DOCTYPE html> 
-<html lang="ja"> 
-  <head> <meta charset="UTF-8" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-    <title>顎関節症・頭蓋骨調整の専門整体｜オレンジ整体院</title> 
-    <meta name="description" content="顎関節症・頭蓋骨調整の専門整体。平塚で不安に寄り添い、やさしく整える整体院です。" /> 
-    <style> :root{ --blue:#2f6fce; --blue-50:#f2f7fc; --blue-100:#e6f0fa; --blue-400:#5a8fdc; --blue-600:#255cb0; --orange:#ff9d3b; --text:#1f2937; --muted:#6b7280; --radius:18px; --shadow:0 12px 28px rgba(18,66,145,.08); --border:1px solid #e9eef7; } 
-      html,body{margin:0;padding:0;background:#fff;color:var(--text);} 
-      body{ font-family:"Hiragino Maru Gothic ProN","Yu Gothic Rounded","Yu Gothic","Meiryo",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; line-height:1.7; } 
-      a{color:var(--blue-600);text-decoration:none} 
-            .container{width:min(980px,92%);margin:0 auto}
-header{
-  position:sticky;top:0;z-index:50;
-  background:rgba(255,255,255,.86);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid #eef2f7;
-}
-.header-inner{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:.85rem 0;
-}
-.brand{
-  display:flex;align-items:center;gap:.8rem;
-  font-weight:900;
-  font-size:1.35rem;
-}
-nav a{margin-left:1rem;font-weight:700}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>顎関節症・頭蓋骨調整の専門整体｜オレンジ整体院</title>
+  <meta name="description" content="顎関節症・頭蓋骨調整の専門整体。平塚で不安に寄り添い、やさしく整える整体院です。" />
 
-.hero{
-  background:linear-gradient(180deg,var(--blue-50),#fff);
-  padding:3rem 0;
-}
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:2rem;
-  align-items:center;
-}
-.hero h1{
-  font-size:2.2rem;
-  line-height:1.35;
-  margin:0 0 1rem;
-}
-.hero p{color:var(--muted)}
-.cta{margin-top:1.2rem;display:flex;gap:.8rem;flex-wrap:wrap}
-.btn{
-  padding:.75rem 1.1rem;
-  border-radius:999px;
-  font-weight:700;
-  display:inline-block;
-}
-.btn.tel{border:2px solid var(--blue);color:var(--blue)}
-.btn.line{background:var(--orange);color:#fff}
+  <style>
+    :root{
+      --blue:#2f6fce;
+      --blue-50:#f2f7fc;
+      --blue-100:#e6f0fa;
+      --blue-400:#5a8fdc;
+      --blue-600:#255cb0;
+      --orange:#ff9d3b;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --radius:18px;
+      --shadow:0 12px 28px rgba(18,66,145,.08);
+      --border:1px solid #e9eef7;
+    }
+    html,body{margin:0;padding:0;background:#fff;color:var(--text);}
+    body{
+      font-family:"Hiragino Maru Gothic ProN","Yu Gothic Rounded","Yu Gothic","Meiryo",
+        system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.7;
+    }
+    a{color:var(--blue-600);text-decoration:none}
+    .container{width:min(980px,92%);margin:0 auto}
 
-.hero-visual{
-position:relative;
-width:100%;
-max-width:520px;
-margin-left:auto;
-height:360px;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:visible;
-}
+    /* header */
+    header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(255,255,255,.86);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid #eef2f7;
+    }
+    .header-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:.85rem 0;
+      gap:1rem;
+    }
+    .brand{
+      display:flex;align-items:center;gap:.8rem;
+      font-weight:900;
+      font-size:1.35rem;
+      white-space:nowrap;
+    }
+    nav{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;justify-content:flex-end}
+    nav a{font-weight:700}
 
-.bubble{
-position:absolute;
-border-radius:999px;
-pointer-events:none;
-z-index:0;
-opacity:.55;
-}
-.bubble.b1{
-width:300px;height:300px;
-top:-30px;left:10px;
-background:rgba(90,143,220,.18);
-}
-.bubble.b2{
-width:240px;height:240px;
-bottom:-40px;right:-10px;
-background:rgba(255,157,59,.16);
-}
+    /* buttons */
+    .btn{
+      padding:.75rem 1.1rem;
+      border-radius:999px;
+      font-weight:700;
+      display:inline-block;
+    }
+    .btn.tel{border:2px solid var(--blue);color:var(--blue)}
+    .btn.line{background:var(--orange);color:#fff}
 
-.illustration{
-position:relative;
-z-index:2;
-width:100%;
-height:auto;
-max-height:360px;
-object-fit:contain;
-display:block;
-}
+    /* hero */
+    .hero{
+      background:linear-gradient(180deg,var(--blue-50),#fff);
+      padding:3rem 0;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:2rem;
+      align-items:center;
+    }
+    .hero h1{
+      font-size:2.2rem;
+      line-height:1.35;
+      margin:0 0 1rem;
+    }
+    .hero p{color:var(--muted)}
+    .cta{margin-top:1.2rem;display:flex;gap:.8rem;flex-wrap:wrap}
 
-@media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr}
-  .hero h1{font-size:1.7rem}
-  .hero-visual{height:300px}
-}
-@media(max-width:900px){
-#first > .container > div{ grid-template-columns:1fr !important; }
-}
-@media(max-width:900px){
-#symptoms .container > div:last-of-type{ grid-template-columns:1fr !important; }
-}
-@media(max-width:900px){
-#blog .container > div:nth-of-type(2){ grid-template-columns:1fr !important; }
-#blog article > div:first-child{ aspect-ratio:16/9 !important; }
-}
-  @media (min-width: 901px){
-  #blog .container article{ }
-  #blog .container > div:nth-of-type(2) > div:first-child > div{ grid-template-columns:repeat(2,1fr) !important; }
-      }
-  .blog-wrap{
-width: min(980px, 92vw);
-margin: 0 auto;
-}
-.blog-cards{
-  display:grid;
-  grid-template-columns:repeat(3, minmax(0, 1fr));
-  gap:.8rem;
-}
-/* ブログ：PCは2カラム固定（強制） */
-.blog-2col{
-  display: grid !important;
-  grid-template-columns: 1.6fr 1fr !important;
-  gap: 1rem !important;
-  align-items: start !important;
-}
-/* スマホだけ縦並び */
-@media (max-width: 900px){
-  .blog-2col{
-    grid-template-columns: 1fr !important;
-  }
-}
+    .hero-visual{
+      position:relative;
+      width:100%;
+      max-width:520px;
+      margin-left:auto;
+      height:360px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:visible;
+    }
+    .bubble{
+      position:absolute;
+      border-radius:999px;
+      pointer-events:none;
+      z-index:0;
+      opacity:.55;
+    }
+    .bubble.b1{
+      width:300px;height:300px;
+      top:-30px;left:10px;
+      background:rgba(90,143,220,.18);
+    }
+    .bubble.b2{
+      width:240px;height:240px;
+      bottom:-40px;right:-10px;
+      background:rgba(255,157,59,.16);
+    }
+    .illustration{
+      position:relative;
+      z-index:2;
+      width:100%;
+      height:auto;
+      max-height:360px;
+      object-fit:contain;
+      display:block;
+    }
 
-/* タブレット：2列 */
-@media (max-width: 1100px){
-  .blog-cards{
-    grid-template-columns:repeat(2, minmax(0, 1fr));
-  }
-}
+    /* blog layout helpers */
+    .blog-wrap{
+      width: min(980px, 92vw);
+      margin: 0 auto;
+    }
+    .blog-2col{
+      display:grid !important;
+      grid-template-columns: 1.6fr 1fr !important;
+      gap: 1rem !important;
+      align-items: start !important;
+      margin-top: 1.1rem;
+    }
+    .blog-cards{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:.8rem;
+    }
 
-/* スマホ：1列 */
-@media (max-width: 900px){
-  .blog-cards{
-    grid-template-columns:1fr;
-  }
-}
+    /* responsive */
+    @media(max-width:1100px){
+      .blog-cards{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
+    }
+    @media(max-width:900px){
+      .hero-grid{grid-template-columns:1fr}
+      .hero h1{font-size:1.7rem}
+      .hero-visual{height:300px}
 
+      /* first section grid */
+      #first > .container > div{ grid-template-columns:1fr !important; }
 
-</style> </head> 
-  
-  <body> 
-  <header> 
-  <div class="container header-inner"> 
-    <div class="brand">オレンジ整体院</div> 
-   <nav> <a href="#first">初めての方へ</a> 
-     <a href="#symptoms">症状別</a> 
-     <a href="#blog">ブログ</a> <a href="#about">院長紹介</a> 
-     <a href="#access">アクセス</a> 
-     <a href="#line" class="btn line" style="padding:.45rem .9rem;border-radius:999px;">LINEで相談</a>
-   </nav>
-  </div> 
-  </header> 
-    
-    <section class="hero"> 
-      <div class="container hero-grid"> 
-        <div> 
-        <h1> 不安に寄り添い、やさしく整える。<br> 顎と頭から、全身のバランスを。 </h1> 
-        <p> 顎関節症・噛みしめ・頭痛など。<br> 強く押さず、軽いタッチで整えます。 </p> 
-        <div class="cta"> 
-          <a class="btn tel" href="tel:0463-24-6062">電話 0463-24-6062</a> 
-          <a class="btn line" href="#">LINEで相談</a> 
-        </div> 
+      /* symptoms cards */
+      #symptoms .container > div:last-of-type{ grid-template-columns:1fr !important; }
+
+      /* blog: stack 2 columns */
+      .blog-2col{ grid-template-columns:1fr !important; }
+
+      /* blog cards 1 col */
+      .blog-cards{ grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="brand">オレンジ整体院</div>
+    <nav>
+      <a href="#first">初めての方へ</a>
+      <a href="#symptoms">症状別</a>
+      <a href="#blog">ブログ</a>
+      <a href="#about">院長紹介</a>
+      <a href="#access">アクセス</a>
+      <a href="#line" class="btn line" style="padding:.45rem .9rem;border-radius:999px;">LINEで相談</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>不安に寄り添い、やさしく整える。<br>顎と頭から、全身のバランスを。</h1>
+      <p>
+        顎関節症・噛みしめ・頭痛など。<br>
+        強く押さず、軽いタッチで整えます。
+      </p>
+      <div class="cta">
+        <a class="btn tel" href="tel:0463-24-6062">電話 0463-24-6062</a>
+        <a class="btn line" href="#line">LINEで相談</a>
       </div>
-<div class="hero-visual">
-  <div class="bubble b1"></div>
-  <div class="bubble b2"></div>
-<img class="illustration" src="assets/hero-illustration.png" alt="やさしいタッチの施術イメージ">
-</div>
-      </div> 
-    </section>
-    
-  <section id="first" style="background:linear-gradient(180deg,#fff,var(--blue-50));"> 
-    <div class="container" style="padding:2.2rem 0;"> 
-      <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:1.4rem;align-items:start;"> 
-        <div> <span class="badge">初めての方へ</span> 
-          <h2 style="margin:.6rem 0 .6rem;">まずは「不安を減らす」ところから</h2> 
-          <p style="color:var(--muted);margin:0 0 1rem;"> 顎まわりの不調は、緊張や不安が症状を強めることがあります。 当院では<strong>強く押さない</strong>やさしいタッチで、状態を丁寧に確認しながら進めます。 </p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;">
-      <div style="background:#fff;border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);">
-        <div style="font-weight:900;color:var(--blue-600);">STEP 1</div>
-        <div style="font-weight:900;margin:.2rem 0;">カウンセリング</div>
-        <div style="color:var(--muted);font-size:.95rem;">不安や経過を丁寧に伺い、目標を共有します。</div>
-      </div>
-      <div style="background:#fff;border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);">
-        <div style="font-weight:900;color:var(--blue-600);">STEP 2</div>
-        <div style="font-weight:900;margin:.2rem 0;">状態チェック</div>
-        <div style="color:var(--muted);font-size:.95rem;">顎・首肩・姿勢の関連を見ながら原因を整理します。</div>
-      </div>
-      <div style="background:#fff;border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);">
-        <div style="font-weight:900;color:var(--blue-600);">STEP 3</div>
-        <div style="font-weight:900;margin:.2rem 0;">やさしい施術</div>
-        <div style="color:var(--muted);font-size:.95rem;">強い刺激は避け、必要最小限のタッチで整えます。</div>
-      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="bubble b1"></div>
+      <div class="bubble b2"></div>
+      <img class="illustration" src="assets/hero-illustration.png" alt="やさしいタッチの施術イメージ">
     </div>
   </div>
-
-  <aside style="background:#fff;border:var(--border);border-radius:18px;padding:1.1rem;box-shadow:var(--shadow);">
-    <div style="font-weight:900;margin:.1rem 0 .6rem;">よくある不安（FAQ）</div>
-
-    <details style="border-top:1px solid #eef2f7;padding:.7rem 0;">
-      <summary style="cursor:pointer;font-weight:800;">痛い施術はありますか？</summary>
-      <div style="color:var(--muted);margin-top:.5rem;font-size:.95rem;">
-        基本的に<strong>強く押したり、無理に動かすことはしません</strong>。刺激に不安がある方は最初にお伝えください。
-      </div>
-    </details>
-
-    <details style="border-top:1px solid #eef2f7;padding:.7rem 0;">
-      <summary style="cursor:pointer;font-weight:800;">どれくらいの頻度で通えばいいですか？</summary>
-      <div style="color:var(--muted);margin-top:.5rem;font-size:.95rem;">
-        状態によりますが、最初は間隔を詰め、その後は安定に合わせて調整します。通院計画は毎回共有します。
-      </div>
-    </details>
-
-    <details style="border-top:1px solid #eef2f7;padding:.7rem 0;">
-      <summary style="cursor:pointer;font-weight:800;">顎以外（首肩・頭痛）も見てもらえますか？</summary>
-      <div style="color:var(--muted);margin-top:.5rem;font-size:.95rem;">
-        はい。顎と首肩・姿勢の関係も確認し、全身のバランスから整えます。
-      </div>
-    </details>
-
-    <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem;">
-      <a class="btn tel" href="tel:0463-24-6062">電話で相談</a>
-      <a class="btn line" href="#line">LINEで相談</a>
-    </div>
-
-    <div style="margin-top:.7rem;color:var(--muted);font-size:.88rem;">
-      ※ネット予約は現状なし。まずはお電話かLINEでご相談ください。
-    </div>
-  </aside>
-</div>
-</div> 
-  </section>
-    
-  <section id="symptoms" style="background:#fff;"> 
-    <div class="container" style="padding:2.2rem 0;"> <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;"> <div> <span class="badge">症状別</span> <h2 style="margin:.6rem 0 .3rem;">お悩みから選ぶ</h2> <p style="color:var(--muted);margin:0;">当てはまる症状から、説明とケアの方針をご案内します。</p> </div> </div>
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:1.1rem;">
-  <a href="#tmj" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
-    <div style="font-weight:900;margin:.1rem 0;">顎関節症</div>
-    <div style="color:var(--muted);font-size:.92rem;">口が開きにくい／音が鳴る／痛み</div>
-  </a>
-
-  <a href="#clench" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
-    <div style="font-weight:900;margin:.1rem 0;">かみしめ・食いしばり</div>
-    <div style="color:var(--muted);font-size:.92rem;">歯ぎしり／エラの疲れ／朝のだるさ</div>
-  </a>
-
-  <a href="#headache" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
-    <div style="font-weight:900;margin:.1rem 0;">頭痛</div>
-    <div style="color:var(--muted);font-size:.92rem;">こめかみ／後頭部の重さ／目の疲れ</div>
-  </a>
-
-  <a href="#neck" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
-    <div style="font-weight:900;margin:.1rem 0;">肩・首こり</div>
-    <div style="color:var(--muted);font-size:.92rem;">姿勢／デスクワーク／緊張</div>
-  </a>
-</div>
-
-</div> 
-  </section> <!-- ↓ 後で固定ページにする前提の「仮アンカー」 --> 
-    
-    <div id="tmj"></div>
-    <div id="clench"></div> 
-    <div id="headache"></div> 
-    <div id="neck"></div>
-    
-<div class="blog-wrap">
-<div class="blog-2col">
-  <!-- 身体の知識：最新3件（仮） -->
-  <div style="background:#fff;border:var(--border);border-radius:18px;box-shadow:var(--shadow);padding:1rem;">
-    <div style="font-weight:900;margin:.1rem 0 .8rem;">身体の知識（最新）</div>
-      <div class="blog-cards">
-
-      <article style="border:var(--border);border-radius:16px;overflow:hidden;background:#fff;">
-        <div style="aspect-ratio:3/2;background:rgba(90,143,220,.12);"></div>
-        <div style="padding:.8rem;">
-          <div style="font-size:.85rem;color:var(--muted);">2026/01/08</div>
-          <div style="font-weight:900;margin:.2rem 0;">顎関節症セルフケアの基本</div>
-          <div style="color:var(--muted);font-size:.92rem;">やさしくできるケアを短く解説します。</div>
-        </div>
-      </article>
-
-      <article style="border:var(--border);border-radius:16px;overflow:hidden;background:#fff;">
-        <div style="aspect-ratio:3/2;background:rgba(255,157,59,.14);"></div>
-        <div style="padding:.8rem;">
-          <div style="font-size:.85rem;color:var(--muted);">2026/01/05</div>
-          <div style="font-weight:900;margin:.2rem 0;">かみしめと首肩こりの関係</div>
-          <div style="color:var(--muted);font-size:.92rem;">緊張が抜けるポイントを整理します。</div>
-        </div>
-      </article>
-
-      <article style="border:var(--border);border-radius:16px;overflow:hidden;background:#fff;">
-        <div style="aspect-ratio:3/2;background:rgba(47,111,206,.12);"></div>
-        <div style="padding:.8rem;">
-          <div style="font-size:.85rem;color:var(--muted);">2025/12/28</div>
-          <div style="font-weight:900;margin:.2rem 0;">頭痛が気になる方へ</div>
-          <div style="color:var(--muted);font-size:.92rem;">顎・首肩との関連をわかりやすく。</div>
-        </div>
-      </article>
-        
-        </div>
-    </div>
-  </div>
-
-  <!-- 連絡事項：お知らせ（仮） -->
-  <aside style="background:#fff;border:var(--border);border-radius:18px;box-shadow:var(--shadow);padding:1rem;">
-    <div style="font-weight:900;margin:.1rem 0 .6rem;">連絡事項</div>
-
-    <div style="border-top:1px solid #eef2f7;padding:.7rem 0;">
-      <div style="font-size:.85rem;color:var(--muted);">2026/01/10</div>
-      <div style="font-weight:900;">臨時休診のお知らせ</div>
-      <div style="color:var(--muted);font-size:.92rem;">○月○日は臨時休診となります。</div>
-    </div>
-
-    <div style="border-top:1px solid #eef2f7;padding:.7rem 0;">
-      <div style="font-size:.85rem;color:var(--muted);">2026/01/02</div>
-      <div style="font-weight:900;">年始の営業について</div>
-      <div style="color:var(--muted);font-size:.92rem;">年始は○日から通常営業です。</div>
-    </div>
-
-    <div style="margin-top:.9rem;display:flex;gap:.6rem;flex-wrap:wrap;">
-      <a class="btn line" href="#line">LINEで確認</a>
-      <a class="btn tel" href="tel:0463-24-6062">電話</a>
-    </div>
-  </aside>
-  
-    </div>
-</div>
-
-<div id="blog-all" style="height:1px;"></div>
-
-<section id="blog" style="background:linear-gradient(180deg,var(--blue-50),#fff);"> 
-  <div class="container" style="padding:2.2rem 0;"> 
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;"> 
-      <div> <span class="badge">ブログ</span> 
-        <h2 style="margin:.6rem 0 .3rem;">身体の知識・連絡事項</h2> 
-        <p style="color:var(--muted);margin:0;">院内の様子も交えつつ、セルフケアや身体の情報、最新のお知らせを発信します。</p> 
-      </div> 
-      <a class="btn tel" href="#blog-all" style="border-color:var(--blue-400);">ブログ一覧へ</a> 
-    </div> 
-  </div> 
 </section>
-<section id="about"> 
-  <div class="container" style="padding:2.2rem 0;"> 
-    <h2 style="margin:0 0 .6rem;">院長紹介</h2> 
-    <p style="color:var(--muted);margin:0;">不安をほどく対話と、やさしい施術で回復力を引き出します。初めての方にも分かりやすくご説明します。</p> 
-  </div> 
-</section> 
-    <section id="access"> 
-      <div class="container" style="padding:2.2rem 0;"> 
-        <h2 style="margin:0 0 .6rem;">アクセス</h2> 
-        <p style="color:var(--muted);margin:0;">平塚駅から○分・駐車場あり（※後で地図を入れます）</p> 
-      </div> 
-    </section> 
-    <footer style="background:#0f2142;color:#d9e5ff;padding:1.6rem 0;"> 
-      <div class="container"> 
-        <div style="font-weight:900;font-size:1.1rem;margin-bottom:.4rem;">オレンジ整体院</div> 
-        <div style="color:#bcd2ff;">顎関節症・頭蓋骨調整の専門整体。やさしい施術と丁寧な説明で、不安に寄り添います。</div>
-        <div style="margin-top:.7rem;color:#96b3f6;font-size:.92rem;">© Orange Seitai</div> 
-    </div> 
-    </footer>
-  </body> 
+
+<section id="first" style="background:linear-gradient(180deg,#fff,var(--blue-50));">
+  <div class="container" style="padding:2.2rem 0;">
+    <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:1.4rem;align-items:start;">
+      <div>
+        <span class="badge">初めての方へ</span>
+        <h2 style="margin:.6rem 0 .6rem;">まずは「不安を減らす」ところから</h2>
+        <p style="color:var(--muted);margin:0 0 1rem;">
+          顎まわりの不調は、緊張や不安が症状を強めることがあります。
+          当院では<strong>強く押さない</strong>やさしいタッチで、状態を丁寧に確認しながら進めます。
+        </p>
+
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;">
+          <div style="background:#fff;border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);">
+            <div style="font-weight:900;color:var(--blue-600);">STEP 1</div>
+            <div style="font-weight:900;margin:.2rem 0;">カウンセリング</div>
+            <div style="color:var(--muted);font-size:.95rem;">不安や経過を丁寧に伺い、目標を共有します。</div>
+          </div>
+          <div style="background:#fff;border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);">
+            <div style="font-weight:900;color:var(--blue-600);">STEP 2</div>
+            <div style="font-weight:900;margin:.2rem 0;">状態チェック</div>
+            <div style="color:var(--muted);font-size:.95rem;">顎・首肩・姿勢の関連を見ながら原因を整理します。</div>
+          </div>
+          <div style="background:#fff;border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);">
+            <div style="font-weight:900;color:var(--blue-600);">STEP 3</div>
+            <div style="font-weight:900;margin:.2rem 0;">やさしい施術</div>
+            <div style="color:var(--muted);font-size:.95rem;">強い刺激は避け、必要最小限のタッチで整えます。</div>
+          </div>
+        </div>
+      </div>
+
+      <aside style="background:#fff;border:var(--border);border-radius:18px;padding:1.1rem;box-shadow:var(--shadow);">
+        <div style="font-weight:900;margin:.1rem 0 .6rem;">よくある不安（FAQ）</div>
+
+        <details style="border-top:1px solid #eef2f7;padding:.7rem 0;">
+          <summary style="cursor:pointer;font-weight:800;">痛い施術はありますか？</summary>
+          <div style="color:var(--muted);margin-top:.5rem;font-size:.95rem;">
+            基本的に<strong>強く押したり、無理に動かすことはしません</strong>。刺激に不安がある方は最初にお伝えください。
+          </div>
+        </details>
+
+        <details style="border-top:1px solid #eef2f7;padding:.7rem 0;">
+          <summary style="cursor:pointer;font-weight:800;">どれくらいの頻度で通えばいいですか？</summary>
+          <div style="color:var(--muted);margin-top:.5rem;font-size:.95rem;">
+            状態によりますが、最初は間隔を詰め、その後は安定に合わせて調整します。通院計画は毎回共有します。
+          </div>
+        </details>
+
+        <details style="border-top:1px solid #eef2f7;padding:.7rem 0;">
+          <summary style="cursor:pointer;font-weight:800;">顎以外（首肩・頭痛）も見てもらえますか？</summary>
+          <div style="color:var(--muted);margin-top:.5rem;font-size:.95rem;">
+            はい。顎と首肩・姿勢の関係も確認し、全身のバランスから整えます。
+          </div>
+        </details>
+
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem;">
+          <a class="btn tel" href="tel:0463-24-6062">電話で相談</a>
+          <a class="btn line" href="#line">LINEで相談</a>
+        </div>
+
+        <div style="margin-top:.7rem;color:var(--muted);font-size:.88rem;">
+          ※ネット予約は現状なし。まずはお電話かLINEでご相談ください。
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="symptoms" style="background:#fff;">
+  <div class="container" style="padding:2.2rem 0;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+      <div>
+        <span class="badge">症状別</span>
+        <h2 style="margin:.6rem 0 .3rem;">お悩みから選ぶ</h2>
+        <p style="color:var(--muted);margin:0;">当てはまる症状から、説明とケアの方針をご案内します。</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:1.1rem;">
+      <a href="#tmj" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
+        <div style="font-weight:900;margin:.1rem 0;">顎関節症</div>
+        <div style="color:var(--muted);font-size:.92rem;">口が開きにくい／音が鳴る／痛み</div>
+      </a>
+
+      <a href="#clench" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
+        <div style="font-weight:900;margin:.1rem 0;">かみしめ・食いしばり</div>
+        <div style="color:var(--muted);font-size:.92rem;">歯ぎしり／エラの疲れ／朝のだるさ</div>
+      </a>
+
+      <a href="#headache" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
+        <div style="font-weight:900;margin:.1rem 0;">頭痛</div>
+        <div style="color:var(--muted);font-size:.92rem;">こめかみ／後頭部の重さ／目の疲れ</div>
+      </a>
+
+      <a href="#neck" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
+        <div style="font-weight:900;margin:.1rem 0;">肩・首こり</div>
+        <div style="color:var(--muted);font-size:.92rem;">姿勢／デスクワーク／緊張</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 仮アンカー -->
+<div id="tmj"></div>
+<div id="clench"></div>
+<div id="headache"></div>
+<div id="neck"></div>
+
+<section id="blog" style="background:linear-gradient(180deg,var(--blue-50),#fff);">
+  <div class="container" style="padding:2.2rem 0;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+      <div>
+        <span class="badge">ブログ</span>
+        <h2 style="margin:.6rem 0 .3rem;">身体の知識・連絡事項</h2>
+        <p style="color:var(--muted);margin:0;">院内の様子も交えつつ、セルフケアや身体の情報、最新のお知らせを発信します。</p>
+      </div>
+      <a class="btn tel" href="#blog-all" style="border-color:var(--blue-400);">ブログ一覧へ</a>
+    </div>
+
+    <div id="blog-all" style="height:1px;"></div>
+
+    <div class="blog-wrap">
+      <div class="blog-2col">
+
+        <!-- 身体の知識：最新3件（仮） -->
+        <div style="background:#fff;border:var(--border);border-radius:18px;box-shadow:var(--shadow);padding:1rem;">
+          <div style="font-weight:900;margin:.1rem 0 .8rem;">身体の知識（最新）</div>
+
+          <div class="blog-cards">
+            <article style="border:var(--border);border-radius:16px;overflow:hidden;background:#fff;">
+              <div style="aspect-ratio:3/2;background:rgba(90,143,220,.12);"></div>
+              <div style="padding:.8rem;">
+                <div style="font-size:.85rem;color:var(--muted);">2026/01/08</div>
+                <div style="font-weight:900;margin:.2rem 0;">顎関節症セルフケアの基本</div>
+                <div style="color:var(--muted);font-size:.92rem;">やさしくできるケアを短く解説します。</div>
+              </div>
+            </article>
+
+            <article style="border:var(--border);border-radius:16px;overflow:hidden;background:#fff;">
+              <div style="aspect-ratio:3/2;background:rgba(255,157,59,.14);"></div>
+              <div style="padding:.8rem;">
+                <div style="font-size:.85rem;color:var(--muted);">2026/01/05</div>
+                <div style="font-weight:900;margin:.2rem 0;">かみしめと首肩こりの関係</div>
+                <div style="color:var(--muted);font-size:.92rem;">緊張が抜けるポイントを整理します。</div>
+              </div>
+            </article>
+
+            <article style="border:var(--border);border-radius:16px;overflow:hidden;background:#fff;">
+              <div style="aspect-ratio:3/2;background:rgba(47,111,206,.12);"></div>
+              <div style="padding:.8rem;">
+                <div style="font-size:.85rem;color:var(--muted);">2025/12/28</div>
+                <div style="font-weight:900;margin:.2rem 0;">頭痛が気になる方へ</div>
+                <div style="color:var(--muted);font-size:.92rem;">顎・首肩との関連をわかりやすく。</div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- 連絡事項：お知らせ（仮） -->
+        <aside style="background:#fff;border:var(--border);border-radius:18px;box-shadow:var(--shadow);padding:1rem;">
+          <div style="font-weight:900;margin:.1rem 0 .6rem;">連絡事項</div>
+
+          <div style="border-top:1px solid #eef2f7;padding:.7rem 0;">
+            <div style="font-size:.85rem;color:var(--muted);">2026/01/10</div>
+            <div style="font-weight:900;">臨時休診のお知らせ</div>
+            <div style="color:var(--muted);font-size:.92rem;">○月○日は臨時休診となります。</div>
+          </div>
+
+          <div style="border-top:1px solid #eef2f7;padding:.7rem 0;">
+            <div style="font-size:.85rem;color:var(--muted);">2026/01/02</div>
+            <div style="font-weight:900;">年始の営業について</div>
+            <div style="color:var(--muted);font-size:.92rem;">年始は○日から通常営業です。</div>
+          </div>
+
+          <div style="margin-top:.9rem;display:flex;gap:.6rem;flex-wrap:wrap;">
+            <a class="btn line" href="#line">LINEで確認</a>
+            <a class="btn tel" href="tel:0463-24-6062">電話</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <div class="container" style="padding:2.2rem 0;">
+    <h2 style="margin:0 0 .6rem;">院長紹介</h2>
+    <p style="color:var(--muted);margin:0;">
+      不安をほどく対話と、やさしい施術で回復力を引き出します。初めての方にも分かりやすくご説明します。
+    </p>
+  </div>
+</section>
+
+<section id="access">
+  <div class="container" style="padding:2.2rem 0;">
+    <h2 style="margin:0 0 .6rem;">アクセス</h2>
+    <p style="color:var(--muted);margin:0;">平塚駅から○分・駐車場あり（※後で地図を入れます）</p>
+  </div>
+</section>
+
+<footer style="background:#0f2142;color:#d9e5ff;padding:1.6rem 0;">
+  <div class="container">
+    <div style="font-weight:900;font-size:1.1rem;margin-bottom:.4rem;">オレンジ整体院</div>
+    <div style="color:#bcd2ff;">顎関節症・頭蓋骨調整の専門整体。やさしい施術と丁寧な説明で、不安に寄り添います。</div>
+    <div style="margin-top:.7rem;color:#96b3f6;font-size:.92rem;">© Orange Seitai</div>
+  </div>
+</footer>
+
+</body>
 </html>
