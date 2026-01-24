@@ -166,6 +166,14 @@
       .kpis{grid-template-columns:1fr}
       nav{justify-content:flex-start}
     }
+      /* 症状別ページ（TMJ）専用：トップと雰囲気を少し変える */
+    .tmj-hero{
+      background: linear-gradient(180deg, #eef3f9, #ffffff);
+    }
+    .tmj-badge{
+      background:#ffe8cc !important;
+      color:#8a4b00 !important;
+    }
   </style>
 </head>
 
@@ -184,10 +192,10 @@
   </div>
 </header>
 
-<section class="hero">
+<section class="hero tmj-hero">
   <div class="container hero-grid">
     <div>
-      <span class="badge">症状別：顎関節症</span>
+      <span class="badge tmj-badge">症状別ページ｜顎関節症</span>
       <h1>顎関節症でお悩みの方へ</h1>
       <p class="lead">
         口の開けづらさ・痛み・音（カクカク）・噛みしめ。<br>
