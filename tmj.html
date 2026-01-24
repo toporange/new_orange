@@ -174,49 +174,32 @@
       background:#ffe8cc !important;
       color:#8a4b00 !important;
     }
-    /* TMJページ専用：視覚シンボル */
-.tmj-visual{
-  position: relative;
-  height: 180px;
-  margin-top: .6rem;
+    
+ /* TMJ：カード内に小さく入れる（余白を作らない） */
+.tmj-card-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:.8rem;
 }
 
-.tmj-circle{
-  position:absolute;
-  width:180px;
-  height:180px;
-  border-radius:50%;
+.tmj-mark{
+  width:72px;
+  height:72px;
+  border-radius:18px;
   background:rgba(47,111,206,.08);
-  right:0;
-  top:0;
+  display:grid;
+  place-items:center;
+  flex:0 0 auto;
 }
 
-.tmj-icon{
-  position:absolute;
-  width:120px;
-  height:120px;
-  right:30px;
-  top:30px;
+.tmj-mark svg{ width:54px; height:54px; display:block; }
+
+@media (max-width: 900px){
+  .tmj-mark{ width:60px; height:60px; border-radius:16px; }
+  .tmj-mark svg{ width:44px; height:44px; }
 }
 
-/* スマホでは主張を弱める */
-@media(max-width:900px){
-  .tmj-visual{
-    height:120px;
-  }
-  .tmj-circle{
-    width:120px;
-    height:120px;
-    right:auto;
-    left:0;
-  }
-  .tmj-icon{
-    width:90px;
-    height:90px;
-    left:15px;
-    top:15px;
-  }
-}
 
   </style>
 </head>
@@ -237,6 +220,10 @@
 </header>
 
 <section class="hero tmj-hero">
+
+<div style="font-size:.9rem;color:var(--muted);">トップ ＞ 症状別 ＞ 顎関節症</div>
+
+  
   <div class="container hero-grid">
     <div>
       <span class="badge tmj-badge">症状別ページ｜顎関節症</span>
@@ -268,30 +255,20 @@
         </div>
       </div>
     </div>
-    <div class="tmj-visual" aria-hidden="true">
-  <div class="tmj-circle"></div>
-  <svg class="tmj-icon" viewBox="0 0 64 64" fill="none">
-    <!-- 顔輪郭 -->
-    <path d="M32 6c10 0 18 8 18 18v10c0 12-8 22-18 22S14 46 14 34V24c0-10 8-18 18-18Z"
-          stroke="#2f6fce" stroke-width="2" opacity=".65"/>
-    <!-- 顎ライン -->
-    <path d="M22 36c2 4 8 6 10 6s8-2 10-6"
-          stroke="#ff9d3b" stroke-width="2" opacity=".7"/>
-  </svg>
-  </div>
+  
+<div class="tmj-card-head">
+  <div style="font-weight:900;margin:.1rem 0 .2rem;">このページで分かること</div>
 
-    <aside class="card">
-      <div style="font-weight:900;margin:.1rem 0 .6rem;">このページで分かること</div>
-      <ul>
-        <li>顎関節症で起こりやすい不安感について</li>
-        <li>当院が「顎だけ」にこだわらない理由</li>
-        <li>間接的なアプローチとは何か</li>
-        <li>どんな方におすすめか／相談のしかた</li>
-      </ul>
-      <div class="note" style="margin-top:.9rem;">
-        ※医療機関の診断が必要な場合もあります。状態によっては受診をご案内します。
-      </div>
-    </aside>
+  <div class="tmj-mark" aria-hidden="true">
+    <svg viewBox="0 0 64 64" fill="none">
+      <path d="M32 6c10 0 18 8 18 18v10c0 12-8 22-18 22S14 46 14 34V24c0-10 8-18 18-18Z"
+            stroke="#2f6fce" stroke-width="2" opacity=".65"/>
+      <path d="M22 36c2 4 8 6 10 6s8-2 10-6"
+            stroke="#ff9d3b" stroke-width="2" opacity=".7"/>
+    </svg>
+  </div>
+</div>
+
   </div>
 </section>
 
