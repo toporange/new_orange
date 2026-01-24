@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>顎関節症でお悩みの方へ｜オレンジ整体院（平塚）</title>
+  <meta name="description" content="顎関節症（口が開きにくい・痛い・音が鳴る・噛みしめ）に伴う不安感にも配慮。強く押さない、やさしい施術と丁寧な説明で、安心して相談できる整体院です。" />
+
+  <style>
+    :root{
+      --blue:#2f6fce;
+      --blue-50:#f2f7fc;
+      --blue-100:#e6f0fa;
+      --blue-400:#5a8fdc;
+      --blue-600:#255cb0;
+      --orange:#ff9d3b;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --radius:18px;
+      --shadow:0 12px 28px rgba(18,66,145,.08);
+      --border:1px solid #e9eef7;
+    }
+    html,body{margin:0;padding:0;background:#fff;color:var(--text);}
+    body{
+      font-family:"Hiragino Maru Gothic ProN","Yu Gothic Rounded","Yu Gothic","Meiryo",
+        system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.75;
+    }
+    a{color:var(--blue-600);text-decoration:none}
+    .container{width:min(980px,92%);margin:0 auto}
+
+    header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(255,255,255,.86);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid #eef2f7;
+    }
+    .header-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:.85rem 0;
+      gap:1rem;
+    }
+    .brand{
+      display:flex;align-items:center;gap:.8rem;
+      font-weight:900;
+      font-size:1.25rem;
+      white-space:nowrap;
+    }
+    nav{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;justify-content:flex-end}
+    nav a{font-weight:700}
+    .badge{
+      display:inline-block;
+      padding:.2rem .6rem;
+      border-radius:999px;
+      background:var(--blue-100);
+      color:var(--blue-600);
+      font-weight:900;
+      font-size:.85rem;
+    }
+
+    .btn{
+      padding:.75rem 1.1rem;
+      border-radius:999px;
+      font-weight:800;
+      display:inline-block;
+    }
+    .btn.tel{border:2px solid var(--blue);color:var(--blue)}
+    .btn.line{background:var(--orange);color:#fff}
+    .btn.ghost{border:1px solid var(--blue-400);color:var(--blue-600);background:#fff}
+
+    .hero{
+      background:linear-gradient(180deg,var(--blue-50),#fff);
+      padding:2.4rem 0 1.6rem;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:1.2rem;
+      align-items:start;
+    }
+    .hero h1{
+      font-size:clamp(1.6rem, 3.2vw, 2.2rem);
+      line-height:1.3;
+      margin:.5rem 0 .7rem;
+    }
+    .hero p{color:var(--muted);margin:.4rem 0}
+    .cta{margin-top:1rem;display:flex;gap:.8rem;flex-wrap:wrap}
+
+    .card{
+      background:#fff;
+      border:var(--border);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      padding:1.1rem;
+    }
+    .kpis{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:.8rem;
+      margin-top:1rem;
+    }
+    .kpi{
+      background:linear-gradient(180deg,#fff,var(--blue-50));
+      border:var(--border);
+      border-radius:16px;
+      padding:1rem;
+    }
+    .kpi .t{font-weight:900;color:var(--blue-600);}
+    .kpi .d{color:var(--muted);font-size:.95rem;margin-top:.25rem;}
+
+    section{padding:2.2rem 0}
+    h2{margin:0 0 .6rem;}
+    h3{margin:1.2rem 0 .5rem;}
+    ul{margin:.4rem 0 0 1.2rem}
+    li{margin:.35rem 0;color:var(--muted)}
+    .lead{color:var(--muted);font-size:1.03rem}
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:1rem;
+      align-items:start;
+    }
+    .note{
+      border-left:4px solid rgba(47,111,206,.35);
+      padding:.2rem .9rem;
+      color:var(--muted);
+      background:rgba(242,247,252,.7);
+      border-radius:12px;
+    }
+
+    .faq details{
+      border-top:1px solid #eef2f7;
+      padding:.85rem 0;
+    }
+    .faq summary{
+      cursor:pointer;
+      font-weight:900;
+    }
+    .faq .ans{
+      margin-top:.6rem;
+      color:var(--muted);
+      font-size:.98rem;
+    }
+
+    .cta-panel{
+      display:flex;
+      gap:.8rem;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:flex-start;
+      margin-top:1rem;
+    }
+
+    footer{
+      background:#0f2142;
+      color:#d9e5ff;
+      padding:1.6rem 0;
+    }
+    footer .sub{color:#bcd2ff}
+    .mini{font-size:.9rem;color:#96b3f6;margin-top:.7rem}
+
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
+      .kpis{grid-template-columns:1fr}
+      nav{justify-content:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="brand">オレンジ整体院</div>
+    <nav>
+      <a href="index.html#symptoms">症状別</a>
+      <a href="index.html#blog">ブログ</a>
+      <a href="index.html#about">院長紹介</a>
+      <a href="index.html#access">アクセス</a>
+      <a class="btn line" href="https://lin.ee/U3jPNo0" target="_blank" rel="noopener" style="padding:.45rem .9rem;">LINEで相談</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">症状別：顎関節症</span>
+      <h1>顎関節症でお悩みの方へ</h1>
+      <p class="lead">
+        口の開けづらさ・痛み・音（カクカク）・噛みしめ。<br>
+        そして、言葉にしづらい<strong>焦燥感や「逃れられない」感覚</strong>まで。<br>
+        当院は、その不安ごと受け止め、やさしく整える整体院です。
+      </p>
+
+      <div class="cta">
+        <a class="btn line" href="https://lin.ee/U3jPNo0" target="_blank" rel="noopener">LINEで相談する</a>
+        <a class="btn tel" href="tel:0463-24-6062">電話 0463-24-6062</a>
+        <a class="btn ghost" href="index.html">トップへ戻る</a>
+      </div>
+
+      <div class="kpis" aria-label="安心ポイント">
+        <div class="kpi">
+          <div class="t">強く押さない</div>
+          <div class="d">軽いタッチで状態を確認しながら進めます。</div>
+        </div>
+        <div class="kpi">
+          <div class="t">丁寧に説明</div>
+          <div class="d">「今なにをしているか」を共有します。</div>
+        </div>
+        <div class="kpi">
+          <div class="t">まず不安を減らす</div>
+          <div class="d">納得してから施術に進むことを大切に。</div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="card">
+      <div style="font-weight:900;margin:.1rem 0 .6rem;">このページで分かること</div>
+      <ul>
+        <li>顎関節症で起こりやすい不安感について</li>
+        <li>当院が「顎だけ」にこだわらない理由</li>
+        <li>間接的なアプローチとは何か</li>
+        <li>どんな方におすすめか／相談のしかた</li>
+      </ul>
+      <div class="note" style="margin-top:.9rem;">
+        ※医療機関の診断が必要な場合もあります。状態によっては受診をご案内します。
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section>
+  <div class="container two-col">
+    <div>
+      <h2>顎関節症の不安感について</h2>
+      <p>
+        「口を開けると痛い」「音が鳴る」「噛むのが不安」だけでなく、<br>
+        <strong>
+          痛みや違和感、不安感が続き、気持ちを落ち着かせようとしても<br>
+          そこから逃れられないような感覚
+        </strong>
+        に悩まされていませんか。
+      </p>
+
+      <p>
+        顎関節症の方の中には、<br>
+        「気持ちの問題なのか分からない」「この不安をうまく説明できない」<br>
+        と感じている方も少なくありません。
+      </p>
+
+      <p>
+        これは決して珍しいことではなく、<br>
+        <strong>顎まわりの緊張や感覚の乱れが、自律神経や呼吸のリズムに影響している</strong>ことも関係しています。<br>
+        顎関節症を経験した方でないと、この不安感はなかなか理解されにくいのが現実です。
+      </p>
+    </div>
+
+    <aside class="card">
+      <div style="font-weight:900;margin:.1rem 0 .6rem;">こんな状態はありませんか？</div>
+      <ul>
+        <li>食事や会話が怖くなる</li>
+        <li>顎のことが頭から離れない</li>
+        <li>眠りが浅く、緊張が抜けない</li>
+        <li>説明しても分かってもらえず孤独感がある</li>
+      </ul>
+      <div class="cta-panel">
+        <a class="btn line" href="https://lin.ee/U3jPNo0" target="_blank" rel="noopener">LINEで相談</a>
+        <a class="btn tel" href="tel:0463-24-6062">電話</a>
+      </div>
+      <div class="mini">※「行くかどうか決めていない」段階でも大丈夫です。</div>
+    </aside>
+  </div>
+</section>
+
+<section style="background:linear-gradient(180deg,#fff,var(--blue-50));">
+  <div class="container">
+    <h2>当院の考え方</h2>
+    <p>
+      顎関節症は、顎だけを見ていても改善しづらいケースが多くあります。<br>
+      顎の緊張は、首・肩だけでなく、<strong>体の使い方やバランス、手足の動き</strong>とも関係しています。
+    </p>
+    <p>
+      当院では、顎の状態を確認しながら、<br>
+      「なぜ今そこに負担が集まっているのか」を全体のつながりから整理していきます。
+    </p>
+    <p>
+      強い刺激や無理な調整を行うことはなく、<br>
+      状態を共有しながら、安心して進めることを大切にしています。
+    </p>
+
+    <div class="note" style="margin-top:1rem;">
+      ポイント：顎に負担が集中している背景に、姿勢・呼吸・緊張のパターンが隠れていることがあります。
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container two-col">
+    <div>
+      <h2>施術について</h2>
+      <p>
+        顎関節症だからといって、必ずしも顎だけに施術を行うわけではありません。<br>
+        状態によっては、<strong>顎から離れた部分へのアプローチ</strong>を中心に行うこともあります。
+      </p>
+      <p>
+        体の緊張やバランスが変わることで、<br>
+        結果として顎まわりの負担が軽くなるケースも多くあります。
+      </p>
+      <p>
+        施術は軽いタッチを基本とし、<br>
+        「今、何をしているのか」を説明しながら進めますので、途中で不安を感じた場合も遠慮なくお伝えください。
+      </p>
+    </div>
+
+    <aside class="card faq">
+      <div style="font-weight:900;margin:.1rem 0 .6rem;">よくある質問</div>
+
+      <details>
+        <summary>痛い施術はありますか？</summary>
+        <div class="ans">
+          基本的に<strong>強い刺激や、無理に動かす施術は行いません</strong>。<br>
+          状態を見ながら必要な範囲で触れます。不安があれば途中でも遠慮なくお伝えください。
+        </div>
+      </details>
+
+      <details>
+        <summary>顎以外（首肩・姿勢）も見てもらえますか？</summary>
+        <div class="ans">
+          はい。顎と首肩・姿勢の関連も確認し、全身のバランスから整えます。
+        </div>
+      </details>
+
+      <details>
+        <summary>まず相談だけでも大丈夫ですか？</summary>
+        <div class="ans">
+          大丈夫です。状態をうかがい、必要であれば受診の目安も含めてご案内します。
+        </div>
+      </details>
+    </aside>
+  </div>
+</section>
+
+<section style="background:linear-gradient(180deg,var(--blue-50),#fff);">
+  <div class="container">
+    <h2>こんな方におすすめです</h2>
+    <ul>
+      <li>顎の痛み・音・違和感があり、日常動作に不安がある方</li>
+      <li>噛みしめ・食いしばりとともに、理由の分からない不安感がある方</li>
+      <li>顎の不調に加えて、股関節や足首など下半身の痛みや違和感がある方</li>
+      <li>首・肩の緊張や姿勢の崩れも気になっている方</li>
+      <li>強い施術や、いきなり顎を触られることに不安がある方</li>
+    </ul>
+
+    <div class="card" style="margin-top:1.2rem;">
+      <div style="font-weight:900;margin:.1rem 0 .6rem;">まずは相談からでも大丈夫です</div>
+      <p style="color:var(--muted);margin:.2rem 0 .7rem;">
+        「自分の不安が顎関節症と関係あるのか分からない」<br>
+        「どこに相談すればいいのか迷っている」<br>
+        そういった段階でも構いません。今感じていることを、そのままお聞かせください。
+      </p>
+      <div class="cta-panel">
+        <a class="btn line" href="https://lin.ee/U3jPNo0" target="_blank" rel="noopener">LINEで相談する</a>
+        <a class="btn tel" href="tel:0463-24-6062">電話で相談</a>
+        <a class="btn ghost" href="index.html#symptoms">症状一覧へ戻る</a>
+      </div>
+      <div class="mini">※返信は営業時間内になる場合があります。お急ぎの方はお電話ください。</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div style="font-weight:900;font-size:1.1rem;margin-bottom:.4rem;">オレンジ整体院</div>
+    <div class="sub">顎関節症・頭蓋骨調整の専門整体。やさしい施術と丁寧な説明で、不安に寄り添います。</div>
+    <div class="mini">© Orange Seitai</div>
+  </div>
+</footer>
+
+</body>
+</html>
