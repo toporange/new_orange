@@ -198,7 +198,37 @@
     overflow: hidden;
   }
 }
+/* 症状別カード：小さいスマホは1列で読めること優先（SH-M09対策） */
+@media (max-width: 480px){
 
+  /* ここで確実に1列にする */
+  #symptoms .sym-grid{
+    grid-template-columns: 1fr !important;
+    gap: .7rem !important;
+  }
+
+  /* カードを締める */
+  #symptoms .sym-grid > a{
+    padding: .9rem 1rem !important;
+    border-radius: 14px !important;
+  }
+
+  /* タイトルは「切らずに2行」表示（省略しない） */
+  #symptoms .sym-grid > a > div:first-child{
+    font-size: 1.05rem !important;
+    line-height: 1.25 !important;
+    white-space: normal !important;   /* 折り返す */
+    overflow: visible !important;     /* 隠さない */
+    margin-bottom: .2rem !important;
+  }
+
+  /* 説明は短く（必要なら消す） */
+  #symptoms .sym-grid > a > div:last-child{
+    font-size: .92rem !important;
+    line-height: 1.3 !important;
+    display: none !important;         /* まずは消して縦長防止（後で復活可） */
+  }
+}
   </style>
 </head>
 
@@ -328,7 +358,7 @@
       </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:1.1rem;">
+   <div class="sym-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:1.1rem;">
       <a href="tmj.html" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
         <div style="font-weight:900;margin:.1rem 0;">顎関節症</div>
         <div style="color:var(--muted);font-size:.92rem;">口が開きにくい／音が鳴る／痛み</div>
