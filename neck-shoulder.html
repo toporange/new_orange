@@ -100,6 +100,46 @@
     @media(max-width:900px){
       .hero-grid,.two-col{grid-template-columns:1fr}
     }
+    /* =========================
+   Related symptoms (共通)
+   ========================= */
+.related{
+  margin-top:2rem;
+  padding-top:1.4rem;
+  border-top:1px solid #eef2f7;
+}
+.related__title{
+  font-weight:900;
+  margin:0 0 .8rem;
+  font-size:1.05rem;
+}
+.related__grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.8rem;
+}
+.related__hint{
+  margin-top:.7rem;
+  color:var(--muted);
+  font-size:.92rem;
+  line-height:1.6;
+}
+
+/* ボタンを少しだけ“リンク用”に最適化（既存 .btn を活かす） */
+.related .btn.ghost{
+  padding:.6rem .95rem;
+}
+
+/* 小さいスマホでも押しやすく */
+@media (max-width: 480px){
+  .related__grid{
+    gap:.6rem;
+  }
+  .related .btn.ghost{
+    width:100%;
+    text-align:center;
+  }
+}
   </style>
 </head>
 
@@ -240,7 +280,17 @@
     <div class="mini">※返信は営業時間内になる場合があります。お急ぎの方はお電話ください。</div>
   </div>
 </section>
-
+<section class="related">
+  <div class="container">
+    <div class="related__title">関連する症状</div>
+    <div class="related__grid">
+      <a href="headache.html" class="btn ghost">頭痛</a>
+      <a href="clenching.html" class="btn ghost">噛みしめ・食いしばり</a>
+      <a href="tmj.html" class="btn ghost">顎関節症</a>
+    </div>
+    <div class="related__hint">※顎・首肩・頭の重さはセットで出ることがあります。</div>
+  </div>
+</section>
 <footer>
   <div class="container">
     <div style="font-weight:900;font-size:1.1rem;margin-bottom:.4rem;">オレンジ整体院</div>
