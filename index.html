@@ -229,6 +229,11 @@
     display: none !important;         /* まずは消して縦長防止（後で復活可） */
   }
 }
+    @media (max-width: 900px){
+  section .container > div[style*="grid-template-columns:repeat(3,1fr)"]{
+    grid-template-columns:1fr !important;
+  }
+}
   </style>
 </head>
 
@@ -281,7 +286,7 @@
     <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:1.4rem;align-items:start;">
       <div>
         <span class="badge">初めての方へ</span>
-        <h2 style="margin:.6rem 0 .6rem;">まずは「何をされるのか分からない不安」を減らすところから</h2>
+   <h2 style="margin:.6rem 0 .6rem;">まずは「何をされるのか分からない不安」を減らすところから</h2>
         <p style="color:var(--muted);margin:0 0 1rem;">
           顎まわりの不調は、緊張や不安が症状を強めることがあります。<br>
           当院では<strong>いきなり施術に入ることはありません</strong>。<br>
@@ -364,22 +369,22 @@
    <div class="sym-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:1.1rem;">
       <a href="tmj.html" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
         <div style="font-weight:900;margin:.1rem 0;">顎関節症</div>
-        <div style="color:var(--muted);font-size:.92rem;">口が開きにくい／音が鳴る／痛み</div>
+       <div style="color:var(--muted);font-size:.92rem;">口が開きにくい／音が鳴る／不安感</div>
       </a>
 
       <a href="clenching.html"" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
         <div style="font-weight:900;margin:.1rem 0;">かみしめ・食いしばり</div>
-        <div style="color:var(--muted);font-size:.92rem;">歯ぎしり／エラの疲れ／朝のだるさ</div>
+        <div style="color:var(--muted);font-size:.92rem;">歯ぎしり／エラの疲れ／力が抜けない</div>
       </a>
 
       <a href="headache.html" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
         <div style="font-weight:900;margin:.1rem 0;">頭痛</div>
-        <div style="color:var(--muted);font-size:.92rem;">こめかみ／後頭部の重さ／目の疲れ</div>
+        <div style="color:var(--muted);font-size:.92rem;">こめかみ／後頭部／目の奥の重さ</div>
       </a>
 
       <a href="neck-shoulder.html" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
         <div style="font-weight:900;margin:.1rem 0;">肩・首こり</div>
-        <div style="color:var(--muted);font-size:.92rem;">姿勢／デスクワーク／緊張</div>
+        <div style="color:var(--muted);font-size:.92rem;">首肩の重さ／噛みしめ由来の緊張</div>
       </a>
     </div>
               <div class="card" style="margin-top:1rem;">
@@ -395,6 +400,38 @@
 <div id="headache"></div>
 <div id="neck"></div>
 
+  <section style="background:linear-gradient(180deg,#fff,var(--blue-50));">
+  <div class="container" style="padding:2.2rem 0;">
+    <span class="badge">患者さんの声</span>
+    <h2 style="margin:.6rem 0 1rem;">こんな変化を感じる方が多いです</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+      <div style="background:#fff;border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);">
+        <div style="font-weight:900;margin-bottom:.4rem;">顎関節症</div>
+        <p style="color:var(--muted);font-size:.95rem;margin:0 0 .5rem;">
+          口を開ける時の痛みが減り、不安感もかなり軽くなりました。説明が丁寧で安心して通えています。
+        </p>
+        <div style="font-size:.8rem;color:var(--muted);">30代 女性</div>
+      </div>
+
+      <div style="background:#fff;border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);">
+        <div style="font-weight:900;margin-bottom:.4rem;">噛みしめ</div>
+        <p style="color:var(--muted);font-size:.95rem;margin:0 0 .5rem;">
+          朝の顎の疲れが減り、首肩も軽くなりました。強く押さない施術なので安心でした。
+        </p>
+        <div style="font-size:.8rem;color:var(--muted);">40代 男性</div>
+      </div>
+
+      <div style="background:#fff;border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);">
+        <div style="font-weight:900;margin-bottom:.4rem;">頭痛</div>
+        <p style="color:var(--muted);font-size:.95rem;margin:0 0 .5rem;">
+          首肩の緊張が抜けると、頭の重さが楽になりました。セルフケアも教えてもらえます。
+        </p>
+        <div style="font-size:.8rem;color:var(--muted);">30代 女性</div>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="blog" style="background:linear-gradient(180deg,var(--blue-50),#fff);">
   <div class="container" style="padding:2.2rem 0;">
     <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
