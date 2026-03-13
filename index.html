@@ -20,50 +20,82 @@
       --shadow:0 12px 28px rgba(18,66,145,.08);
       --border:1px solid #e9eef7;
     }
+
     html,body{margin:0;padding:0;background:#fff;color:var(--text);}
     body{
-      font-family:"Hiragino Maru Gothic ProN","Yu Gothic Rounded","Yu Gothic","Meiryo",
-        system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      font-family:"Hiragino Maru Gothic ProN","Yu Gothic Rounded","Yu Gothic","Meiryo",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       line-height:1.7;
     }
+
     a{color:var(--blue-600);text-decoration:none}
     .container{width:min(980px,92%);margin:0 auto}
 
-    /* header */
     header{
-      position:sticky;top:0;z-index:50;
+      position:sticky;
+      top:0;
+      z-index:50;
       background:rgba(255,255,255,.86);
       backdrop-filter:blur(10px);
       border-bottom:1px solid #eef2f7;
     }
     .header-inner{
-      display:flex;align-items:center;justify-content:space-between;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
       padding:.85rem 0;
       gap:1rem;
     }
     .brand{
-      display:flex;align-items:center;gap:.8rem;
+      display:flex;
+      align-items:center;
+      gap:.8rem;
       font-weight:900;
       font-size:1.35rem;
-      white-space:nowrap;
     }
-    nav{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;justify-content:flex-end}
+    nav{
+      display:flex;
+      align-items:center;
+      gap:.9rem;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
     nav a{font-weight:700}
 
-    /* buttons */
+    .badge{
+      display:inline-block;
+      padding:.2rem .65rem;
+      border-radius:999px;
+      background:var(--blue-100);
+      color:var(--blue-600);
+      font-weight:900;
+      font-size:.82rem;
+    }
+
     .btn{
       padding:.75rem 1.1rem;
       border-radius:999px;
       font-weight:700;
       display:inline-block;
     }
-    .btn.tel{border:2px solid var(--blue);color:var(--blue)}
-    .btn.line{background:var(--orange);color:#fff}
+    .btn.tel{
+      border:2px solid var(--blue);
+      color:var(--blue);
+      background:#fff;
+    }
+    .btn.line{
+      background:var(--orange);
+      color:#fff;
+    }
+    .btn.ghost{
+      border:1px solid var(--blue-400);
+      color:var(--blue-600);
+      background:#fff;
+    }
 
-    /* hero */
     .hero{
       background:linear-gradient(180deg,var(--blue-50),#fff);
       padding:3rem 0;
+      border-bottom:1px solid #eef2f7;
     }
     .hero-grid{
       display:grid;
@@ -77,7 +109,12 @@
       margin:0 0 1rem;
     }
     .hero p{color:var(--muted)}
-    .cta{margin-top:1.2rem;display:flex;gap:.8rem;flex-wrap:wrap}
+    .cta{
+      margin-top:1.2rem;
+      display:flex;
+      gap:.8rem;
+      flex-wrap:wrap;
+    }
 
     .hero-visual{
       position:relative;
@@ -117,123 +154,98 @@
       display:block;
     }
 
-    /* blog layout helpers */
-    .blog-wrap{
-      width: min(980px, 92vw);
-      margin: 0 auto;
+    section{
+      border-bottom:1px solid #eef2f7;
     }
+
+    .blog-wrap{
+      width:min(980px,92vw);
+      margin:0 auto;
+    }
+
     .blog-2col{
       display:grid !important;
-      grid-template-columns: 1.6fr 1fr !important;
-      gap: 1rem !important;
-      align-items: start !important;
-      margin-top: 1.1rem;
+      grid-template-columns:1.6fr 1fr !important;
+      gap:1rem !important;
+      align-items:start !important;
+      margin-top:1.1rem;
     }
+
     .blog-cards{
       display:grid;
-      grid-template-columns:repeat(3, minmax(0, 1fr));
+      grid-template-columns:repeat(3,minmax(0,1fr));
       gap:.8rem;
     }
 
-    /* responsive */
-    @media(max-width:1100px){
-      .blog-cards{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
+    .related{
+      margin-top:2rem;
+      padding-top:1.4rem;
+      border-top:1px solid #eef2f7;
     }
+    .related__title{
+      font-weight:900;
+      margin:0 0 .8rem;
+      font-size:1.05rem;
+    }
+    .related__grid{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.8rem;
+    }
+    .related__hint{
+      margin-top:.7rem;
+      color:var(--muted);
+      font-size:.92rem;
+      line-height:1.6;
+    }
+
+    @media(max-width:1100px){
+      .blog-cards{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+    }
+
     @media(max-width:900px){
       .hero-grid{grid-template-columns:1fr}
       .hero h1{font-size:1.7rem}
       .hero-visual{height:300px}
 
-      /* first section grid */
-      #first > .container > div{ grid-template-columns:1fr !important; }
-
-      /* symptoms cards */
-      #symptoms .container > div:last-of-type{ grid-template-columns:1fr !important; }
-
-      /* blog: stack 2 columns */
-      .blog-2col{ grid-template-columns:1fr !important; }
-
-      /* blog cards 1 col */
-      .blog-cards{ grid-template-columns:1fr; }
+      #first > .container > div{grid-template-columns:1fr !important;}
+      .blog-2col{grid-template-columns:1fr !important;}
+      .blog-cards{grid-template-columns:1fr;}
     }
-   @media (max-width: 900px){
-      #line .container > div{ grid-template-columns:1fr !important; }
+
+    @media(max-width:480px){
+      #symptoms .sym-grid{
+        grid-template-columns:1fr !important;
+        gap:.7rem !important;
+      }
+
+      #symptoms .sym-grid > a{
+        padding:.9rem 1rem !important;
+        border-radius:14px !important;
+      }
+
+      #symptoms .sym-grid > a > div:first-child{
+        font-size:1.05rem !important;
+        line-height:1.25 !important;
+        white-space:normal !important;
+        overflow:visible !important;
+        margin-bottom:.2rem !important;
+      }
+
+      #symptoms .sym-grid > a > div:last-child{
+        font-size:.92rem !important;
+        line-height:1.3 !important;
+        display:none !important;
+      }
+
+      .related__grid{gap:.6rem;}
+      .related .btn.ghost{
+        width:100%;
+        text-align:center;
+      }
     }
-/* 症状別カード：小さいスマホでは1列で「読める」優先 */
-@media (max-width: 420px){
-
-  /* 症状別を1列にする（タイトルが読める幅を確保） */
-  #symptoms .container > div:last-of-type{
-    grid-template-columns: 1fr !important;
-    gap: .7rem !important;
-  }
-
-  /* カードを締める */
-  #symptoms a{
-    padding: .9rem 1rem !important;
-    border-radius: 14px !important;
-    overflow: hidden !important;
-  }
-
-  /* タイトル：2行まで見せる（省略は2行目末尾） */
-  #symptoms a div:first-child{
-    font-size: 1.05rem !important;
-    line-height: 1.25 !important;
-    margin-bottom: .25rem !important;
-
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  /* 説明：1行だけ */
-  #symptoms a div:last-child{
-    font-size: .92rem !important;
-    line-height: 1.3 !important;
-
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-}
-/* 症状別カード：小さいスマホは1列で読めること優先（SH-M09対策） */
-@media (max-width: 480px){
-
-  /* ここで確実に1列にする */
-  #symptoms .sym-grid{
-    grid-template-columns: 1fr !important;
-    gap: .7rem !important;
-  }
-
-  /* カードを締める */
-  #symptoms .sym-grid > a{
-    padding: .9rem 1rem !important;
-    border-radius: 14px !important;
-  }
-
-  /* タイトルは「切らずに2行」表示（省略しない） */
-  #symptoms .sym-grid > a > div:first-child{
-    font-size: 1.05rem !important;
-    line-height: 1.25 !important;
-    white-space: normal !important;   /* 折り返す */
-    overflow: visible !important;     /* 隠さない */
-    margin-bottom: .2rem !important;
-  }
-
-  /* 説明は短く（必要なら消す） */
-  #symptoms .sym-grid > a > div:last-child{
-    font-size: .92rem !important;
-    line-height: 1.3 !important;
-    display: none !important;         /* まずは消して縦長防止（後で復活可） */
-  }
-}
-    @media (max-width: 900px){
-  section .container > div[style*="grid-template-columns:repeat(3,1fr)"]{
-    grid-template-columns:1fr !important;
-  }
-}
   </style>
 </head>
 
@@ -248,7 +260,7 @@
       <a href="#blog">ブログ</a>
       <a href="#about">院長紹介</a>
       <a href="#access">アクセス</a>
-      <a href="https://lin.ee/U3jPNo0" class="btn line" style="padding:.45rem .9rem;border-radius:999px;">LINEで相談</a>
+      <a href="https://lin.ee/U3jPNo0" class="btn line" target="_blank" rel="noopener" style="padding:.45rem .9rem;border-radius:999px;">LINEで相談</a>
     </nav>
   </div>
 </header>
@@ -256,21 +268,21 @@
 <section class="hero">
   <div class="container hero-grid">
     <div>
-     <h1>顎関節症・噛みしめでお悩みの方へ。<br>やさしい施術で整える専門整体</h1>
-<p>
-  顎の痛み・噛みしめ・頭痛・首肩こりなど。<br>
-  強く押さず、軽いタッチで状態を確認しながら整えます。<br>
-  顎の不調にともなう不安感でお悩みの方も、ご相談ください。
-</p>
+      <h1>顎関節症・噛みしめでお悩みの方へ。<br>やさしい施術で整える専門整体</h1>
+      <p>
+        顎の痛み・噛みしめ・頭痛・首肩こりなど。<br>
+        強く押さず、軽いタッチで状態を確認しながら整えます。<br>
+        顎の不調にともなう不安感でお悩みの方も、ご相談ください。
+      </p>
 
       <div class="cta">
         <a class="btn tel" href="tel:0463-24-6062">電話 0463-24-6062</a>
-        <a class="btn line" href="https://lin.ee/U3jPNo0">LINEで相談</a>
+        <a class="btn line" href="https://lin.ee/U3jPNo0" target="_blank" rel="noopener">LINEで相談</a>
       </div>
-<div style="margin-top:1rem;color:var(--muted);font-size:.95rem;line-height:1.7;">
-  ※「何をされるか分からない不安がある」「強い施術が苦手」という方にも、安心して受けていただけるよう配慮しています。
-</div>
-      
+
+      <div style="margin-top:1rem;color:var(--muted);font-size:.95rem;line-height:1.7;">
+        ※「何をされるか分からない不安がある」「強い施術が苦手」という方にも、安心して受けていただけるよう配慮しています。
+      </div>
     </div>
 
     <div class="hero-visual">
@@ -281,12 +293,12 @@
   </div>
 </section>
 
-<section id="first" style="background:linear-gradient(180deg,#fff,var(--blue-50));">
+<section id="first" style="background:#fff;">
   <div class="container" style="padding:2.2rem 0;">
     <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:1.4rem;align-items:start;">
       <div>
         <span class="badge">初めての方へ</span>
-   <h2 style="margin:.6rem 0 .6rem;">まずは「何をされるのか分からない不安」を減らすところから</h2>
+        <h2 style="margin:.6rem 0 .6rem;">まずは「何をされるのか分からない不安」を減らすところから</h2>
         <p style="color:var(--muted);margin:0 0 1rem;">
           顎まわりの不調は、緊張や不安が症状を強めることがあります。<br>
           当院では<strong>いきなり施術に入ることはありません</strong>。<br>
@@ -318,10 +330,7 @@
         <details style="border-top:1px solid #eef2f7;padding:.7rem 0;">
           <summary style="cursor:pointer;font-weight:800;">痛い施術はありますか？</summary>
           <div style="color:var(--muted);margin-top:.5rem;font-size:.95rem;">
-            基本的に<strong>強い刺激や、無理に動かす施術は行いません</strong>。
-            状態を見ながら必要な範囲で触れるため、
-            「思っていたより怖くなかった」と言われることが多いです。
-            不安がある場合は、途中でも遠慮なくお伝えください。
+            基本的に<strong>強い刺激や、無理に動かす施術は行いません</strong>。状態を見ながら必要な範囲で触れます。不安があれば途中でも遠慮なくお伝えください。
           </div>
         </details>
 
@@ -341,11 +350,7 @@
 
         <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem;">
           <a class="btn tel" href="tel:0463-24-6062">電話で相談</a>
-          <a class="btn line" href="https://lin.ee/U3jPNo0">LINEで相談</a>
-          <p style="color:var(--muted);margin-top:.6rem;font-size:.9rem;">
-            ※「行くかどうか決めていない」段階でも大丈夫です。
-          </p>
-
+          <a class="btn line" href="https://lin.ee/U3jPNo0" target="_blank" rel="noopener">LINEで相談</a>
         </div>
 
         <div style="margin-top:.7rem;color:var(--muted);font-size:.88rem;">
@@ -366,13 +371,13 @@
       </div>
     </div>
 
-   <div class="sym-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:1.1rem;">
+    <div class="sym-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:1.1rem;">
       <a href="tmj.html" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
         <div style="font-weight:900;margin:.1rem 0;">顎関節症</div>
-       <div style="color:var(--muted);font-size:.92rem;">口が開きにくい／音が鳴る／不安感</div>
+        <div style="color:var(--muted);font-size:.92rem;">口が開きにくい／音が鳴る／不安感</div>
       </a>
 
-      <a href="clenching.html"" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
+      <a href="clenching.html" style="background:linear-gradient(180deg,#fff,var(--blue-50));border:var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:block;">
         <div style="font-weight:900;margin:.1rem 0;">かみしめ・食いしばり</div>
         <div style="color:var(--muted);font-size:.92rem;">歯ぎしり／エラの疲れ／力が抜けない</div>
       </a>
@@ -387,20 +392,10 @@
         <div style="color:var(--muted);font-size:.92rem;">首肩の重さ／噛みしめ由来の緊張</div>
       </a>
     </div>
-              <div class="card" style="margin-top:1rem;">
-          <div style="font-weight:900;margin:.1rem 0 .4rem;">症状別ページをご用意しています</div>
-          <div style="color:var(--muted);font-size:.95rem;">顎関節症の「不安感」まで含めて、症状ごとに詳しくまとめています。</div>
-        </div>
   </div>
 </section>
 
-<!-- 仮アンカー -->
-<div id="tmj"></div>
-<div id="clench"></div>
-<div id="headache"></div>
-<div id="neck"></div>
-
-  <section style="background:linear-gradient(180deg,#fff,var(--blue-50));">
+<section style="background:linear-gradient(180deg,#fff,var(--blue-50));">
   <div class="container" style="padding:2.2rem 0;">
     <span class="badge">患者さんの声</span>
     <h2 style="margin:.6rem 0 1rem;">こんな変化を感じる方が多いです</h2>
@@ -432,7 +427,8 @@
     </div>
   </div>
 </section>
-<section id="blog" style="background:linear-gradient(180deg,var(--blue-50),#fff);">
+
+<section id="blog" style="background:#fff;">
   <div class="container" style="padding:2.2rem 0;">
     <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
       <div>
@@ -447,8 +443,6 @@
 
     <div class="blog-wrap">
       <div class="blog-2col">
-
-        <!-- 身体の知識：最新3件（仮） -->
         <div style="background:#fff;border:var(--border);border-radius:18px;box-shadow:var(--shadow);padding:1rem;">
           <div style="font-weight:900;margin:.1rem 0 .8rem;">身体の知識（最新）</div>
 
@@ -482,7 +476,6 @@
           </div>
         </div>
 
-        <!-- 連絡事項：お知らせ（仮） -->
         <aside style="background:#fff;border:var(--border);border-radius:18px;box-shadow:var(--shadow);padding:1rem;">
           <div style="font-weight:900;margin:.1rem 0 .6rem;">連絡事項</div>
 
@@ -499,26 +492,15 @@
           </div>
 
           <div style="margin-top:.9rem;display:flex;gap:.6rem;flex-wrap:wrap;">
-            <a class="btn line" href="https://lin.ee/U3jPNo0">LINEで確認</a>
+            <a class="btn line" href="https://lin.ee/U3jPNo0" target="_blank" rel="noopener">LINEで確認</a>
             <a class="btn tel" href="tel:0463-24-6062">電話</a>
           </div>
         </aside>
-
       </div>
     </div>
-
   </div>
 </section>
 
-<section id="about">
-  <div class="container" style="padding:2.2rem 0;">
-    <h2 style="margin:0 0 .6rem;">院長紹介</h2>
-    <p style="color:var(--muted);margin:0;">
-      不安をほどく対話と、やさしい施術で回復力を引き出します。初めての方にも分かりやすくご説明します。
-    </p>
-  </div>
-</section>
-  
 <section id="line" style="background:linear-gradient(180deg,#fff,var(--blue-50));">
   <div class="container" style="padding:2.2rem 0;">
     <span class="badge">LINE相談</span>
@@ -541,18 +523,30 @@
       <div style="background:#fff;border:var(--border);border-radius:18px;box-shadow:var(--shadow);padding:1rem;">
         <div style="font-weight:900;margin:.1rem 0 .7rem;">LINEで相談（24時間受付）</div>
         <div style="display:flex;gap:.6rem;flex-wrap:wrap;">
-          <a class="btn line" href="https://lin.ee/U3jPNo0" target="_blank" rel="noopener">LINEで相談する</a> 
+          <a class="btn line" href="https://lin.ee/U3jPNo0" target="_blank" rel="noopener">LINEで相談する</a>
           <a class="btn tel" href="tel:0463-24-6062">電話で相談</a>
         </div>
         <div style="margin-top:.7rem;color:var(--muted);font-size:.88rem;">
           ※返信は営業時間内になる場合があります。お急ぎの方はお電話ください。
         </div>
+        <p style="color:var(--muted);margin-top:.6rem;font-size:.9rem;">
+          ※「行くかどうか決めていない」段階でも大丈夫です。
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="access">
+<section id="about" style="background:#fff;">
+  <div class="container" style="padding:2.2rem 0;">
+    <h2 style="margin:0 0 .6rem;">院長紹介</h2>
+    <p style="color:var(--muted);margin:0;">
+      不安をほどく対話と、やさしい施術で回復力を引き出します。初めての方にも分かりやすくご説明します。
+    </p>
+  </div>
+</section>
+
+<section id="access" style="background:#fff;">
   <div class="container" style="padding:2.2rem 0;">
     <h2 style="margin:0 0 .6rem;">アクセス</h2>
     <p style="color:var(--muted);margin:0;">平塚駅から○分・駐車場あり（※後で地図を入れます）</p>
